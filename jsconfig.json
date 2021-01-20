@@ -5,7 +5,6 @@
     "baseUrl": ".",
     "noImplicitAny": false,
     "paths": {
-      // common
       "@*": ["./src/*"],
       "@layouts": ["./src/layouts"],
       "@components": ["./src/components"],

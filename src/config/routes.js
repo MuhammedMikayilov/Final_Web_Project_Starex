@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Test } from "@layouts";
+import {HomePage, Test} from "@layouts";
 
 //Main API url
 export const CRM_API_URL = "https://crm.besfly.com";
@@ -20,7 +20,7 @@ export const API_ROUTES = {
 export const MENU_ROUTES = [
   {
     //Root path
-    path: "/test",
+    path: "/",
     //Root name which renders in Header
     name: "Test",
     //Root icon - reuired - icon or svg element
@@ -28,21 +28,6 @@ export const MENU_ROUTES = [
     //If root is exact root
     isExact: true,
     //Root compoenent if it is main root
-    component: (props) => <Test {...props} />,
-    //Root sub components - you must pass one of this parameters - component or nestedRoutes
-    // nestedRoutes: [
-    //   {
-    //     path: "/",
-    //     name: "Root 1",
-    //     isExact: true,
-    //     component: (props) => UserVehicles(props),
-    //   },
-    //   {
-    //     path: "/:id?",
-    //     name: "Root 2",
-    //     isExact: true,
-    //     component: (props) => UserVehicles(props),
-    //   },
-    // ],
+    component: (props) => <HomePage {...props} />
   },
 ];

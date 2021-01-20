@@ -1,0 +1,16 @@
+.frame-header {
+  position: sticky;
+  top: 0px;
+  z-index: 99;
+  height: $header_height;
+  background-color: var(--secondary-rgb-50);
+  backdrop-filter: blur(5px);
+  .title {
+    max-width: 60%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 1.5rem;
+    color: var(--dark);
+  }
+}

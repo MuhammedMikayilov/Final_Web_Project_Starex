@@ -1,0 +1,129 @@
+.checkbox-custom-container {
+  outline: none !important;
+  border: none;
+  background: none;
+  .checkbox-custom {
+    width: 20px;
+    height: 20px;
+    color: #ffffff;
+    cursor: pointer;
+    -webkit-box-shadow: 0 1px 3px rgba(50, 50, 93, 0.15),
+      0 1px 0 rgba(0, 0, 0, 0.02);
+    box-shadow: 0 1px 3px rgba(50, 50, 93, 0.15), 0 1px 0 rgba(0, 0, 0, 0.02);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+    &.checked {
+      background-color: #2dce89;
+      border-color: #2dce89;
+    }
+    &.disabled {
+      opacity: 0.7;
+    }
+    i {
+      font-weight: bolder;
+    }
+  }
+  label {
+    cursor: pointer !important;
+  }
+}
+
+.dropzone {
+  color: #8898aa;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 2px dashed;
+  border-color: #dcdcdc;
+  border-radius: 0.375rem;
+  padding: 1rem;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.15s;
+  outline: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 140px;
+  &:hover {
+    border-color: #11cdef;
+  }
+}
+
+.file-item {
+  padding: 10px;
+  border: 1px solid #e4e8ea;
+  border-radius: 10px;
+  div:not(:last-child) {
+    border-right: 1px solid #e4e8ea;
+  }
+  .file-about {
+    width: calc((100% - 120px) / 100 * 40);
+    .file-image {
+      width: 100px;
+      height: 50px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+    .file-name {
+      width: 100%;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+  .file-progress {
+    width: calc((100% - 120px) / 100 * 60);
+    .progress-container {
+      width: 90%;
+      height: 18px;
+      border-radius: 500rem;
+      background: #e1e7ec;
+      font-size: 10px;
+      font-weight: 700;
+      .progress-loaded {
+        position: absolute;
+        left: 0;
+        top: 0;
+        border: 0;
+        height: 100%;
+        background: #a4de7b;
+        transition: width 0.3s;
+      }
+      .info {
+        position: relative;
+        color: #565656;
+      }
+    }
+  }
+  .file-actions {
+    width: 120px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .file-item {
+    padding: 5px;
+    .file-about {
+      width: calc((100% - 70px) / 100 * 40);
+      .file-image {
+        width: 60px;
+        height: 40px;
+      }
+      .file-name {
+        display: none !important;
+      }
+    }
+    .file-progress {
+      width: calc((100% - 70px) / 100 * 60);
+      .progress-container {
+        height: 15px;
+        font-size: 8px;
+      }
+    }
+    .file-actions {
+      width: 70px;
+    }
+  }
+}

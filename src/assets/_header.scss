@@ -1,16 +1,36 @@
-.frame-header {
-  position: sticky;
-  top: 0px;
-  z-index: 99;
-  height: $header_height;
-  background-color: var(--secondary-rgb-50);
-  backdrop-filter: blur(5px);
-  .title {
-    max-width: 60%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    font-size: 1.5rem;
-    color: var(--dark);
-  }
-}
+
+ nav .icons {
+   ul{
+     margin: 0!important;
+     margin-right: 3rem !important;
+     padding: 0!important;
+     list-style: none;
+
+     li {
+       padding: 4px;
+       a{
+         background: #929292;
+         color: #fff;
+         font-size: 12px;
+         padding: 4px 8px;
+         border-radius: 100%;
+         width: 64px;
+         height: 25px;
+         line-height: 25px;
+         transition: all .5s;
+
+         &:hover{transition: all .5s;}
+       }
+       .facebook:hover{ background: #3b5999; }
+       .instagram:hover{ background: #e4405f; }
+     }
+   }
+ }
+
+ nav #infoDate .icon{
+   position: relative;
+   i{
+     position: absolute;
+     top:55%;
+   }
+ }

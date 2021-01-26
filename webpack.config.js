@@ -3,6 +3,21 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
 const path = require("path");
 
+module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.(png|jpeg|gif|jpg)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ],
+      },
+    ],
+  },
+};
+
 module.exports = (env, argv) => {
   const config = require(`./config/webpack.${
     argv.mode === "development" ? "dev" : "prod"

@@ -1,11 +1,12 @@
 import * as React from "react";
 import {Link} from "react-router-dom";
-import {InitialState} from "@components/Template/actions";
 import HeaderTop from "@components/Template/components/HeaderTop";
 import HeaderBottom from "@components/Template/components/HeaderBottom";
 import {HeaderNavbar} from "@config";
 
-export const Header = () => {
+export const Header = (props) => {
+
+    const {renderLink, renderPages} = props;
 
     const renderLinks = () => {
         return HeaderNavbar.map((link, key) => (
@@ -23,7 +24,7 @@ export const Header = () => {
 
   return (
       <header>
-         <HeaderTop />
+         <HeaderTop renderLinks={renderLink} renderPages={renderPages}/>
         <HeaderBottom />
           <nav className="navbar navbar-expand-lg navbar-light" style={{backgroundColor:"#005fb5"}}>
               <div className="container">

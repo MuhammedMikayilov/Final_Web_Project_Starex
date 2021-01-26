@@ -32,6 +32,18 @@ export const HeaderNavbar = [
     component: (props) => <HomePage {...props} />
   },
 
+  {
+    //Root path
+    path: "/tariffs",
+    //Root name which renders in Header
+    name: "Home",
+    //If root is exact root
+    isExact: true,
+    isMainPage: true,
+    //Root compoenent if it is main root
+    component: (props) => <Test {...props} />
+  },
+
     //NavbarPages
   {
     //Root path

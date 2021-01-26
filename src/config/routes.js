@@ -1,5 +1,6 @@
 import * as React from "react";
-import {HomePage, Test} from "@layouts";
+import {HomePage} from "@layouts";
+import Test from "@layouts/Tariffs/Test";
 
 //Main API url
 export const CRM_API_URL = "https://crm.besfly.com";
@@ -17,17 +18,97 @@ export const API_ROUTES = {
   translations: CRM_API_URL + "/settings/translations",
 };
 
-export const MENU_ROUTES = [
+export const HeaderNavbar = [
+    //Main Pages
   {
     //Root path
     path: "/",
     //Root name which renders in Header
-    name: "Test",
-    //Root icon - reuired - icon or svg element
-    icon: <i className="feather feather-award text-warning" />,
+    name: "Home",
     //If root is exact root
     isExact: true,
+    isMainPage: true,
     //Root compoenent if it is main root
     component: (props) => <HomePage {...props} />
   },
-];
+
+    //NavbarPages
+  {
+    //Root path
+    path: "/about",
+    //Root name which renders in Header
+    name: "Haqqımızda",
+    isHeader: true,
+    //If root is exact root
+    isExact: true,
+    //Root compoenent if it is main root
+    component: (props) => <Test {...props} />
+  },
+  {
+    //Root path
+    path: "/news",
+    //Root name which renders in Header
+    name: "Xəbərlər",
+    isHeader: true,
+    //If root is exact root
+    isExact: true,
+    //Root compoenent if it is main root
+    component: (props) => <Test {...props} />
+  },
+  {
+    //Root path
+    path: "/faq",
+    //Root name which renders in Header
+    name: "Tez-tez verilən suallar",
+    //If root is exact root
+    isExact: true,
+    isHeader: true,
+    //Root compoenent if it is main root
+    component: (props) => <Test {...props} />
+  },
+  {
+    //Root path
+    path: "/social-responsibility",
+    //Root name which renders in Header
+    name: "KSM",
+    //If root is exact root
+    isExact: true,
+    isHeader: true,
+    //Root compoenent if it is main root
+    component: (props) => <Test {...props} />
+  },
+  {
+    //Root path
+    path: "/az",
+    //Root name which renders in Header
+    name: "Korporativ daşınmalar",
+    //If root is exact root
+    isExact: true,
+    isHeader: true,
+    //Root compoenent if it is main root
+    component: (props) => <Test {...props} />
+  },
+
+  {
+    //Root path
+    path: "/login",
+    //Root name which renders in Header
+    name: "Şəxsi Kabinet",
+    //If root is exact root
+    isExact: true,
+    isLoginPanel: true,
+    //Root compoenent if it is main root
+    component: (props) => <Test {...props} />
+  },
+  {
+    //Root path
+    path: "/register",
+    //Root name which renders in Header
+    name: "Qeydiyyat",
+    //If root is exact root
+    isExact: true,
+    isLoginPanel: true,
+    //Root compoenent if it is main root
+    component: (props) => <Test {...props} />
+  }
+]

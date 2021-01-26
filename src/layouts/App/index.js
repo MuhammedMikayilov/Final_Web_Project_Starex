@@ -3,7 +3,7 @@ import qs from "query-string";
 import { Switch, Route, Redirect, useHistory } from "react-router-dom";
 import {Header, Loading} from "@components";
 import { AppProvider, SidebarProvider } from "@contexts";
-import { MENU_ROUTES } from "@config";
+import {HeaderNavbar} from "@config";
 import { useCookie } from "@hooks";
 import {Footer} from "@components/Template/Footer";
 
@@ -51,7 +51,7 @@ export const App = () => {
     <AppProvider>
       <Header />
       <Switch>
-        {renderRoutes(MENU_ROUTES)}
+        {renderRoutes(HeaderNavbar)}
         {/* You must add your default root here */}
         <Redirect from="*" to="/" />
       </Switch>

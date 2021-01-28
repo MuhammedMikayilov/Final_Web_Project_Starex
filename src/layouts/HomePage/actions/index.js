@@ -18,12 +18,12 @@ export const CountriesList = {
         {
             id: 2,
             country: "ABŞ",
-            isLiquid: true,
+            isLiquid: false,
         },
         {
             id: 3,
             country: "Çin",
-            isLiquid: true,
+            isLiquid: false,
         }
     ]
 }
@@ -32,6 +32,7 @@ export const CountriesList = {
 export const PriceForWeight = {
     data: [
         {
+            id:1,
             minWeight: 0.0,
             maxWeight: 0.10,
             price: 1.50,

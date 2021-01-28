@@ -7,7 +7,8 @@ const Selections = (props) => {
     const [inputVal, updateInputVal] = useState(0);
     const inputRef = React.useRef();
     const [priceState, updatePriceState] = useState(PriceForWeight)
-    const [price, updatePrice] = useState(0.00);
+    const [price, updatePrice] = useState(0.00)
+    const [liquid, updateLiquid] = useState("true");
 
 
 
@@ -15,12 +16,26 @@ const Selections = (props) => {
        <>
            <div className="col-md-4">
                <div className="wrap">
-                   <select>
-                       {selections.data.map((item, key)=>(
-                           <option key={key}> {item.country}</option>
-                       ))}
+                   <select onChange={(e)=>{
+                       console.log("Before", e.target.value, "And", liquid)
+                       updateLiquid(e.target.value)
+                       console.log("After", e.target.value, "And", liquid)
+
+                   }}>
+                       {selections.data.map((item, key)=>{
+                           return <option key={key} value={item.isLiquid}> {item.country}</option>
+                       })}
                    </select>
                </div>
+               <div className={`liquid ${liquid==='false'&&'hidden'}`}>
+                   <div className="">
+                       <input style={{width:"20px", height:"20px"}}  type="checkbox" value="" id="flexCheckDefault"/>
+                       <label style={{fontSize:"15px"}} className="form-check-label ml-3" htmlFor="flexCheckDefault">
+                           Məhsulun tərkibində maye var
+                       </label>
+                   </div>
+               </div>
+
            </div>
            <div className="col-md-4">
                <div className="wrap">
@@ -50,7 +65,6 @@ const Selections = (props) => {
                    <div className='message'>{Lang.get("Çatdırılma qiyməti")}</div>
                    <div className="value">
                        ${inputVal!==""?inputVal:0}
-
                    </div>
                </div>
            </div>

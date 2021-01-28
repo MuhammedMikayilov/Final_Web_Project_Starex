@@ -1,6 +1,6 @@
 import * as React from "react";
-import {HomePage} from "@layouts";
-import Test from "@layouts/Tariffs/Test";
+import { HomePage } from "@layouts";
+import Test from "@layouts/Tariffs/index";
 
 //Main API url
 export const CRM_API_URL = "https://crm.besfly.com";
@@ -19,7 +19,7 @@ export const API_ROUTES = {
 };
 
 export const HeaderNavbar = [
-    //Main Pages
+  //Main Pages
   {
     //Root path
     path: "/",
@@ -29,22 +29,22 @@ export const HeaderNavbar = [
     isExact: true,
     isMainPage: true,
     //Root compoenent if it is main root
-    component: (props) => <HomePage {...props} />
+    component: (props) => <HomePage {...props} />,
   },
 
   {
     //Root path
     path: "/tariffs",
     //Root name which renders in Header
-    name: "Home",
+    name: "Tariflər",
     //If root is exact root
     isExact: true,
     isMainPage: true,
     //Root compoenent if it is main root
-    component: (props) => <Test {...props} />
+    component: (props) => <Test {...props} />,
   },
 
-    //NavbarPages
+  //NavbarPages
   {
     //Root path
     path: "/about",
@@ -54,7 +54,7 @@ export const HeaderNavbar = [
     //If root is exact root
     isExact: true,
     //Root compoenent if it is main root
-    component: (props) => <Test {...props} />
+    component: (props) => <Test {...props} />,
   },
   {
     //Root path
@@ -65,7 +65,7 @@ export const HeaderNavbar = [
     //If root is exact root
     isExact: true,
     //Root compoenent if it is main root
-    component: (props) => <Test {...props} />
+    component: (props) => <Test {...props} />,
   },
   {
     //Root path
@@ -76,7 +76,7 @@ export const HeaderNavbar = [
     isExact: true,
     isHeader: true,
     //Root compoenent if it is main root
-    component: (props) => <Test {...props} />
+    component: (props) => <Test {...props} />,
   },
   {
     //Root path
@@ -87,7 +87,7 @@ export const HeaderNavbar = [
     isExact: true,
     isHeader: true,
     //Root compoenent if it is main root
-    component: (props) => <Test {...props} />
+    component: (props) => <Test {...props} />,
   },
   {
     //Root path
@@ -98,7 +98,7 @@ export const HeaderNavbar = [
     isExact: true,
     isHeader: true,
     //Root compoenent if it is main root
-    component: (props) => <Test {...props} />
+    component: (props) => <Test {...props} />,
   },
 
   {
@@ -110,7 +110,7 @@ export const HeaderNavbar = [
     isExact: true,
     isLoginPanel: true,
     //Root compoenent if it is main root
-    component: (props) => <Test {...props} />
+    component: (props) => <Test {...props} />,
   },
   {
     //Root path
@@ -121,6 +121,6 @@ export const HeaderNavbar = [
     isExact: true,
     isLoginPanel: true,
     //Root compoenent if it is main root
-    component: (props) => <Test {...props} />
-  }
-]
+    component: (props) => <Test {...props} />,
+  },
+];

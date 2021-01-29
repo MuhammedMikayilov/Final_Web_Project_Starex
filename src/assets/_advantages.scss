@@ -1,0 +1,46 @@
+.advantage{
+  background: #ffffff;
+  .advantage-item{
+
+    padding: 40px 100px 0px 40px;
+
+    .title{
+      position: relative;
+      color: #454545;
+      font-size: 24px;
+      line-height: 27px;
+
+      &::after{
+        content: "";
+        position: absolute;
+        bottom: -19px;
+        left: 0;
+        width: 86px;
+        height: 4px;
+        background: #005fb5;
+      }
+    }
+
+    ul{
+      list-style: none;
+      margin-top: 70px;
+
+      li{
+        .icon-advantage{
+          font-size: 50px;
+          line-height: 60px;
+        }
+        .title-advantage{
+          margin: 0 0 10px;
+          font-size: 22px;
+          color: #005fb5;
+        }
+        .description-advantage{
+          color: #666;
+          font-size: 16px;
+        }
+      }
+    }
+
+  }
+}

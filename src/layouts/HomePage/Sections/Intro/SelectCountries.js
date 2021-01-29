@@ -25,6 +25,7 @@ const Selections = (props) => {
                <div style={{marginLeft:"25px"}} className={`liquid ${liquid==="false"&&'hidden'}`}>
                    <div className="">
                        <input
+                           id="flexCheckDefault"
                            style={{width:"15px", height:"15px"}}
                            type="checkbox"
                            onChange={()=>{

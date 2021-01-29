@@ -1,6 +1,6 @@
 import React, { Component, useState } from "react";
 import { ContainsLiquid } from "@layouts/Tariffs/actions";
-import Countries from "./countries";
+import Countries from "./Countries";
 
 const Tariffs = () => {
   const [state, setState] = React.useState(ContainsLiquid);

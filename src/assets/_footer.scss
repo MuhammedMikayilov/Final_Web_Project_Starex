@@ -1,0 +1,19 @@
+footer{
+  ul {
+    list-style: none;
+
+    li{
+      a{
+        color: white;
+        font-size: 15px;
+        transition: all .2s;
+
+        &:hover{
+          color: white;
+          text-decoration: underline;
+          transition: all .2s;
+        }
+      }
+    }
+  }
+}

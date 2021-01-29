@@ -1,4 +1,4 @@
-export const InitialState = {
+export const InitialStateHeader = {
     data: [
         {
             id: 1,
@@ -33,5 +33,15 @@ export const InitialState = {
             address: null,
             phone: "(012) 310 0825"
         },
-    ]
+    ],
+    logo: "starexLogo.png",
+}
+
+export const InitialStateBios = {
+    data: [
+        {
+
+        },
+    ],
+    logoDark: "starexLogo.png"
 }

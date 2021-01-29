@@ -1,8 +1,8 @@
 import * as React from "react";
 import qs from "query-string";
-import { Switch, Route, Redirect, useHistory } from "react-router-dom";
+import {Switch, Route, Redirect, useHistory, Link} from "react-router-dom";
 import {Header, Loading} from "@components";
-import { AppProvider, SidebarProvider } from "@contexts";
+import { AppProvider } from "@contexts";
 import {HeaderNavbar} from "@config";
 import { useCookie } from "@hooks";
 import {Footer} from "@components/Template/Footer";
@@ -46,16 +46,44 @@ export const App = () => {
     return <Loading bgClass="bg-white" />;
   }
 
+  //FunctionsForHeaderAndBottom
+    const renderLink = () => {
+        return HeaderNavbar.map((link, key) => (
+            link.isHeader &&
+            <li
+                className="nav-item mr-4"
+                key={key}
+            >
+                <Link
+                    to={link.path}
+                >{link.name}</Link>
+            </li>
+        ));
+    };
+    const renderPages = () => {
+        return HeaderNavbar.map((link, key) => (
+            link.isLoginPanel &&
+            <li
+                className="nav-item mr-4"
+                key={key}
+            >
+                <Link
+                    to={link.path}
+                >{link.name}</Link>
+            </li>
+        ));
+    };
+
 
   return (
     <AppProvider>
-      <Header />
+      <Header renderLink={renderLink()} renderPages={renderPages()}/>
       <Switch>
         {renderRoutes(HeaderNavbar)}
         {/* You must add your default root here */}
         <Redirect from="*" to="/" />
       </Switch>
-      <Footer activeRoute={'Test'} />
+      <Footer activeRoute={'Test'} renderLink={renderLink()} renderPages={renderPages()}/>
     </AppProvider>
   );
 };

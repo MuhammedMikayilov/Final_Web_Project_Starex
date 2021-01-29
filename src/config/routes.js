@@ -4,7 +4,7 @@ import Test from "@layouts/Tariffs/Test";
 import Tariffs from "@layouts/Tariffs";
 
 export const HeaderNavbar = [
-    //Main Pages
+  //Main Pages
   {
     //Root path
     path: "/",
@@ -14,7 +14,7 @@ export const HeaderNavbar = [
     isExact: true,
     isMainPage: true,
     //Root compoenent if it is main root
-    component: (props) => <HomePage {...props} />
+    component: (props) => <HomePage {...props} />,
   },
 
     //NavbarPages
@@ -28,8 +28,9 @@ export const HeaderNavbar = [
     isExact: true,
     index:1,
     //Root compoenent if it is main root
-    component: (props) => <Test {...props} />
+    component: (props) => <Test {...props} />,
   },
+  //NavbarPages
   {
     //Root path
     path: "/social-responsibility",
@@ -40,7 +41,7 @@ export const HeaderNavbar = [
     isHeader: true,
     index: 0,
     //Root compoenent if it is main root
-    component: (props) => <Test {...props} />
+    component: (props) => <Test {...props} />,
   },
   {
     //Root path
@@ -64,7 +65,7 @@ export const HeaderNavbar = [
     isLoginPanel: true,
     index: 0,
     //Root compoenent if it is main root
-    component: (props) => <Test {...props} />
+    component: (props) => <Test {...props} />,
   },
   {
     //Root path
@@ -76,7 +77,7 @@ export const HeaderNavbar = [
     isLoginPanel: true,
     index: 0,
     //Root compoenent if it is main root
-    component: (props) => <Test {...props} />
+    component: (props) => <Test {...props} />,
   },
 
   //  Navbars Pages
@@ -128,7 +129,7 @@ export const HeaderNavbar = [
     isNavbar: true,
     index:5,
     //Root compoenent if it is main root
-    component: (props) => <Test {...props} />
+    component: (props) => <Test {...props} />,
   },
   {
     //Root path
@@ -141,7 +142,7 @@ export const HeaderNavbar = [
     isNavbar: true,
     index:6,
     //Root compoenent if it is main root
-    component: (props) => <Test {...props} />
+    component: (props) => <Test {...props} />,
   },
   {
     //Root path
@@ -153,7 +154,7 @@ export const HeaderNavbar = [
     isNavbar: true,
     index:7,
     //Root compoenent if it is main root
-    component: (props) => <Test {...props} />
+    component: (props) => <Test {...props} />,
   },
   {
     //Root path

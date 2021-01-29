@@ -25,7 +25,7 @@ export const Header = (props) => {
   return (
       <header>
          <HeaderTop renderLinks={renderLink} renderPages={renderPages}/>
-        <HeaderBottom />
+         <HeaderBottom />
           <nav className="navbar navbar-expand-lg navbar-light" style={{backgroundColor:"#005fb5"}}>
               <div className="container">
                   <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"

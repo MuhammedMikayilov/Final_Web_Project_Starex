@@ -1,8 +1,8 @@
 import * as React from "react";
-import { SidebarContext } from "@contexts";
+// import { SidebarContext } from "@contexts";
 
 export const Content = ({ children }) => {
-  const { mode } = React.useContext(SidebarContext);
+  // const { mode } = React.useContext(SidebarContext);
   return (
     <section
       className={`frame-content ${

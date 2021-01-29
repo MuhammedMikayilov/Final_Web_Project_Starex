@@ -7,30 +7,31 @@ const Selections = (props) => {
     const [inputVal, updateInputVal] = useState(0);
     const inputRef = React.useRef();
     const [priceState, updatePriceState] = useState(PriceForWeight)
-    const [price, updatePrice] = useState(0.00)
+    const [checkLiquid, updateChecklLiquid] = useState(false)
     const [liquid, updateLiquid] = useState("true");
-
-
 
     return (
        <>
            <div className="col-md-4">
                <div className="wrap">
                    <select onChange={(e)=>{
-                       console.log("Before", e.target.value, "And", liquid)
                        updateLiquid(e.target.value)
-                       console.log("After", e.target.value, "And", liquid)
-
                    }}>
                        {selections.data.map((item, key)=>{
                            return <option key={key} value={item.isLiquid}> {item.country}</option>
                        })}
                    </select>
                </div>
-               <div className={`liquid ${liquid==='false'&&'hidden'}`}>
+               <div style={{marginLeft:"25px"}} className={`liquid ${liquid==="false"&&'hidden'}`}>
                    <div className="">
-                       <input style={{width:"20px", height:"20px"}}  type="checkbox" value="" id="flexCheckDefault"/>
-                       <label style={{fontSize:"15px"}} className="form-check-label ml-3" htmlFor="flexCheckDefault">
+                       <input
+                           style={{width:"15px", height:"15px"}}
+                           type="checkbox"
+                           onChange={()=>{
+                               updateChecklLiquid(!checkLiquid)
+                           }}
+                       />
+                       <label style={{fontSize:"14px"}} className="form-check-label ml-3" htmlFor="flexCheckDefault">
                            Məhsulun tərkibində maye var
                        </label>
                    </div>
@@ -64,7 +65,7 @@ const Selections = (props) => {
                <div className="wrap priceDelivery">
                    <div className='message'>{Lang.get("Çatdırılma qiyməti")}</div>
                    <div className="value">
-                       ${inputVal!==""?inputVal:0}
+                       ${inputVal!==""? checkLiquid?inputVal*2 :inputVal:0}
                    </div>
                </div>
            </div>

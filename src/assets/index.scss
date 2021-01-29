@@ -3,12 +3,11 @@
 @import "modal";
 @import "sweetalert";
 @import "form";
-@import "sidebar";
+@import "title";
 @import "header";
 @import "footer";
 @import "content";
 @import "intro";
+@import "about";
 
-.owerflow-x-scroll {
-  overflow-x: scroll !important;
-}
+body{overflow-x: hidden}

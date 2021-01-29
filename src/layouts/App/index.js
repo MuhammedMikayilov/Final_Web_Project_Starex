@@ -2,7 +2,7 @@ import * as React from "react";
 import qs from "query-string";
 import {Switch, Route, Redirect, useHistory, Link} from "react-router-dom";
 import {Header, Loading} from "@components";
-import { AppProvider, SidebarProvider } from "@contexts";
+import { AppProvider } from "@contexts";
 import {HeaderNavbar} from "@config";
 import { useCookie } from "@hooks";
 import {Footer} from "@components/Template/Footer";

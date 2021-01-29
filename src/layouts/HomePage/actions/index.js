@@ -1,3 +1,5 @@
+import React from "react";
+
 export const IntroDatas = {
     data: [
         {
@@ -27,7 +29,6 @@ export const CountriesList = {
         }
     ]
 }
-
 
 export const PriceForWeight = {
     data: [
@@ -72,6 +73,29 @@ export const PriceForWeight = {
         {
             minWeight: 10,
             price: 4.00,
+        },
+    ]
+}
+
+export const AboutApi = {
+    title: "STAREX NECƏ İŞLƏYİR",
+    description: "Türkiyə, Amerika, Çin və Almaniyadan sifariş edin, alış-veriş xərcləriniz 2 dəfə az olsun.",
+
+    data: [
+        {
+            icon:<i className="fas fa-cube"/>,
+            title:"Qeydiyyatdan keçin",
+            description:"Türkiyə və Amerikadan məhsul sifariş vermək üçün ilk öncə saytımızda qeydiyyatdan keçin."
+        },
+        {
+            icon: <i className="fas fa-file-signature"/>,
+            title:"\"Həvalə et\" xidmətindən istifadə edin",
+            description:"Türkiyənin alış-veriş saytlarından bəyəndiyiniz məhsulun linkini \"Həvalə et\" xidməti ilə bizə göndərin"
+        },
+        {
+            icon: <i className="fas fa-map-marked-alt"/>,
+            title:"Evinizə qədər çatdıraq",
+            description:"Sifariş etdiyiniz məhsulu ofisimizdən təhvil alın və ya evinizə qədər çatdıraq."
         },
     ]
 }

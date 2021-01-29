@@ -149,3 +149,26 @@ export const AdvantagesApi = {
 
     ]
 }
+
+export const LatestApi = {
+    id: 1,
+    title: "Ən Son Yeniliklərimiz",
+
+    data:[
+        {
+            image: "e-manat.jpg",
+            title: "E-manatla yalnız USD balans artımı mümkündür!",
+            time: "26.01.2021"
+        },
+        {
+            image: "trendyol.jpg",
+            title: "Bizimlə Trendyolda Türkiyə daxili karqo ödənişsiz!",
+            time: "22.01.2021"
+        },
+        {
+            image: "germany-card.jpg",
+            title: "Almaniya anbarımız xidmətinizdədir!",
+            time: "21.01.2021"
+        },
+    ]
+}

@@ -3,8 +3,8 @@ import React from 'react';
 const Title = ({title, description})=> {
     return (
         <div className='row title-header'>
-            <h1>{title}</h1>
-            <p>{description}</p>
+            {title !=="" && <h1>{title}</h1>}
+            {description!=="" && <p>{description}</p>}
         </div>
     );
 }

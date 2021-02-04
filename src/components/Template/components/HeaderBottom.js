@@ -1,12 +1,10 @@
 import React, {Component} from 'react';
 import {Link} from "react-router-dom";
-import {InitialState} from "@components/Template/actions";
+import {InitialStateHeader} from "@components/Template/actions";
 
 const HeaderBottom = (props) => {
-    const image = "./images/starexLogo.png"
-    const [state, useState] = React.useState(InitialState)
+    const [state, useState] = React.useState(InitialStateHeader)
     const navRender = ()=>{
-
         return state.data.map((item, key)=>(
             <li key={key} className='nav-item ml-3'>
                 <div className='row' id='infoDate'>
@@ -37,17 +35,16 @@ const HeaderBottom = (props) => {
                             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"/>
                     </button>
-                    <div className="collapse navbar-collapse row" id="navbarNav">
+                    <div className="collapse navbar-collapse row bd-highlight" id="navbarNav">
                         <div className="logo col-md-6">
                             <Link to="/">
                                 <img
-                                    src={process.env.PUBLIC_URL+ image}
+                                    src={process.env.PUBLIC_URL+ `./images/${state.logo}`}
                                     style={{width:"100px", marginLeft:"20px"}}
                                     alt=" logo"
                                 />
                             </Link>
                         </div>
-
                         <div className='col-md-6'>
                             <ul className='navbar-nav'>
                                 {navRender()}

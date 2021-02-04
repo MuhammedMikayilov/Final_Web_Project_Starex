@@ -3,33 +3,7 @@ import {HeaderNavbar} from "@config";
 import {Link} from "react-router-dom";
 
 const HeaderTop = (props) => {
-    const renderLinks = () => {
-        return HeaderNavbar.map((link, key) => (
-            link.isHeader &&
-            <li
-                className="nav-item mr-4"
-                key={key}
-            >
-                <Link
-                    to={link.path}
-                >{link.name}</Link>
-            </li>
-        ));
-    };
-
-    const renderPages = () => {
-        return HeaderNavbar.map((link, key) => (
-            link.isLoginPanel &&
-            <li
-                className="nav-item mr-4"
-                key={key}
-            >
-                <Link
-                    to={link.path}
-                >{link.name}</Link>
-            </li>
-        ));
-    };
+    const {renderLinks, renderPages} = props;
     return (
         <nav className="navbar navbar-expand-lg navbar-light" style={{backgroundColor:"#f7f7f7"}}>
             <div className="container">
@@ -54,12 +28,12 @@ const HeaderTop = (props) => {
                 </button>
                 <div className="collapse navbar-collapse row" id="navbarNav">
                     <ul className="navbar-nav col-md-9">
-                        {renderLinks()}
+                        {renderLinks}
                     </ul>
 
                     <div className='col-md-3'>
                         <ul className="navbar-nav">
-                            {renderPages()}
+                            {renderPages}
                         </ul>
                     </div>
                 </div>

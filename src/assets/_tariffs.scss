@@ -14,6 +14,11 @@
       width: 30px;
       margin-right: 10px;
     }
+
+    .countryLink {
+      color: #000;
+      font-size: 16px;
+    }
   }
 
   .tariffs {
@@ -22,8 +27,53 @@
     margin-top: 20px;
 
     .tariffList {
-      padding: 20px 35px;
+      padding: 15px 25px;
       border-bottom: 0.5px solid #d9d9d9;
+    }
+  }
+
+  .active {
+    background-color: #ffab03 !important;
+    h4 {
+      color: white !important;
+    }
+  }
+}
+
+// # # # # # # # # # # # # # # RESPONSIVE # # # # # # # # # # # # # # //
+
+@media (max-width: 768px) {
+  #tariffsSection {
+    .country {
+      padding: 20px !important;
+
+      .flat {
+        margin-right: 7px;
+      }
+    }
+    .tariffs .tariffList {
+      padding: 17px;
+
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  #tariffsSection {
+    .country {
+      padding: 15px !important;
+
+      .flat {
+        height: 20px;
+        width: 20px;
+      }
+
+      .countryLink {
+        font-size: 12px;
+      }
     }
   }
 }

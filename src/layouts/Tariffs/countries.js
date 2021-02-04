@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 const Countries = (props) => {
   const { hasLiquid, hasWater, selectId, setId } = props;
   const [state, setState] = React.useState(CountiesList);
+  //console.log(selectId);
 
   const forCountries = () => {
     return state.data.map((item, key) => {
@@ -12,16 +13,15 @@ const Countries = (props) => {
         <li className="list-unstyled" key={key}>
           <Link
             onClick={() => {
+              setId(item.id);
               if (item.hasLiquid) {
                 hasWater(true);
-                setId(item.id);
               } else {
                 hasWater(false);
-                setId(item.id);
               }
             }}
             to="#"
-            style={{ color: "#000", fontSize: "16px" }}
+            className="countryLink"
           >
             <img
               src={process.env.PUBLIC_URL + item.image}

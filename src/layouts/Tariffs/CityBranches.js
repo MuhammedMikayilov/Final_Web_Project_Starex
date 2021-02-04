@@ -46,8 +46,7 @@ function CityBranches() {
           }}
           onChange={(e) => {
             setCityId(e.target.value);
-            // setBranchesId(e.target.value); // Bura da yazilmaliydi. Yazmamishdin
-            //console.log("Ref", brachId);
+            setBranchesId("");
           }}
         >
           {forCity()}
@@ -63,8 +62,6 @@ function CityBranches() {
           }}
           onChange={(e) => {
             setBranchesId(e.target.value);
-            //updateBranchId(e.target.value);
-            // console.log(branchRef.current, "val branch");
           }}
         >
           <option>Filial seçin</option>

@@ -1,5 +1,5 @@
 import * as React from "react";
-import {HomePage} from "@layouts";
+import { HomePage } from "@layouts";
 import Test from "@layouts/Tariffs/Test";
 import Tariffs from "@layouts/Tariffs";
 
@@ -17,7 +17,7 @@ export const HeaderNavbar = [
     component: (props) => <HomePage {...props} />,
   },
 
-    //NavbarPages
+  //NavbarPages
   {
     //Root path
     path: "/about",
@@ -26,7 +26,7 @@ export const HeaderNavbar = [
     isHeader: true,
     //If root is exact root
     isExact: true,
-    index:1,
+    index: 1,
     //Root compoenent if it is main root
     component: (props) => <Test {...props} />,
   },
@@ -53,7 +53,7 @@ export const HeaderNavbar = [
     isHeader: true,
     index: 0,
     //Root compoenent if it is main root
-    component: (props) => <Test {...props} />
+    component: (props) => <Test {...props} />,
   },
   {
     //Root path
@@ -89,9 +89,9 @@ export const HeaderNavbar = [
     //If root is exact root
     isExact: true,
     isNavbar: true,
-    index:2,
+    index: 2,
     //Root compoenent if it is main root
-    component: (props) => <Tariffs {...props} />
+    component: (props) => <Tariffs {...props} />,
   },
 
   {
@@ -102,21 +102,21 @@ export const HeaderNavbar = [
     //If root is exact root
     isExact: true,
     isNavbar: true,
-    index:3,
+    index: 3,
     //Root compoenent if it is main root
-    component: (props) => <Test {...props} />
+    component: (props) => <Test {...props} />,
   },
   {
     //Root path
     path: "/shops",
     //Root name which renders in Header
     name: "Mağazalar",
-    index:4,
+    index: 4,
     //If root is exact root
     isExact: true,
     isNavbar: true,
     //Root compoenent if it is main root
-    component: (props) => <Test {...props} />
+    component: (props) => <Test {...props} />,
   },
   {
     //Root path
@@ -127,7 +127,7 @@ export const HeaderNavbar = [
     //If root is exact root
     isExact: true,
     isNavbar: true,
-    index:5,
+    index: 5,
     //Root compoenent if it is main root
     component: (props) => <Test {...props} />,
   },
@@ -140,7 +140,7 @@ export const HeaderNavbar = [
     isExact: true,
     isHeader: true,
     isNavbar: true,
-    index:6,
+    index: 6,
     //Root compoenent if it is main root
     component: (props) => <Test {...props} />,
   },
@@ -152,7 +152,7 @@ export const HeaderNavbar = [
     //If root is exact root
     isExact: true,
     isNavbar: true,
-    index:7,
+    index: 7,
     //Root compoenent if it is main root
     component: (props) => <Test {...props} />,
   },
@@ -164,9 +164,9 @@ export const HeaderNavbar = [
     //If root is exact root
     isExact: true,
     isNavbar: true,
-    index:0,
+    index: 0,
     //Root compoenent if it is main root
-    component: (props) => <Test {...props} />
+    component: (props) => <Test {...props} />,
   },
   {
     //Root path
@@ -176,9 +176,8 @@ export const HeaderNavbar = [
     //If root is exact root
     isExact: true,
     isNavbar: true,
-    index:8,
+    index: 8,
     //Root compoenent if it is main root
-    component: (props) => <Test {...props} />
+    component: (props) => <Test {...props} />,
   },
-
-]
+];

@@ -1,6 +1,6 @@
 import React, { Component, useState } from "react";
-import { CountiesList } from "@layouts/Tariffs/actions/countries";
 import { Link } from "react-router-dom";
+import { CountiesList } from "@layouts/Tariffs/actions/countries";
 
 const Countries = (props) => {
   const { hasLiquid, hasWater, selectId, setId } = props;
@@ -29,7 +29,7 @@ const Countries = (props) => {
             style={{ color: "#000", fontSize: "16px" }}
           >
             <img
-              src={process.env.PUBLIC_URL + item.image}
+              src={process.env.PUBLIC_URL + `./images/${item.image}`}
               alt="flat"
               className="flat"
             />

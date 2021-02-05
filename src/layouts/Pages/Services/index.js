@@ -4,7 +4,7 @@ import { ServiceList } from "./actions/services";
 const Services = () => {
   const [state, setState] = React.useState(ServiceList);
 
-  const forService = () => {
+  const forService = (e) => {
     return state.data.map((item, key) => {
       return (
         <div className="serviceList" key={key}>

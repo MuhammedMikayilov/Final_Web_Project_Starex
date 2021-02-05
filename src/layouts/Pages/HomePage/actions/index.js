@@ -184,6 +184,7 @@ export const DetailNewsApi = {
     data: [
         {
             id:1,
+            imageDetail: "e-manat.jpg",
             description: "" +
                 "Dəyərli müştərilərimiz, bağlamalarınız xarici anbarda sistemə daxil edildikdə e.customs.az və ya \"Smart Customs\" tətbiqindən daxil olub bəyannamənizi təsdiqləməlisiniz.\n" +
                 "\n" +
@@ -203,6 +204,7 @@ export const DetailNewsApi = {
         },
         {
             id: 2,
+            imageDetail: "trk.jpg",
             description: "Əziz müştərilər, 3 Fevral tarixindən 31 mart tarixinədək" +
                 " 28 May filialımızdan yaradılan Bakıdaxili bütün kuryer sifarişləri 1 AZN olacaqdır.\n" +
                 "\n" +

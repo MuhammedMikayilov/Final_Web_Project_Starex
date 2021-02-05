@@ -1,7 +1,5 @@
 import * as React from "react";
-import { AppContext, SidebarContext } from "@contexts";
-import { Lang } from "@plugins";
-import {InitialStateBios, InitialStateHeader} from "@components/Template/actions";
+import {InitialStateBios} from "@components/Template/actions";
 import {Link} from "react-router-dom";
 import {HeaderNavbar} from "@config";
 

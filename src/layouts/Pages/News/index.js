@@ -5,6 +5,9 @@ import IntroPages from "@components/Template/components/IntroPages";
 
 const News = (props)=> {
     const [state, setState] = useState(LatestApi)
+    const TTT = ()=>{
+        console.log("ABC")
+    }
     return (
         <div className='newsPage'>
             <IntroPages title={'Xəbərlər'}/>

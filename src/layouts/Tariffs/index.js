@@ -1,6 +1,6 @@
 import React, { Component, useState } from "react";
 import { ContainsLiquid } from "@layouts/Tariffs/actions";
-import Countries from "./Countries";
+import Countries from "./countries";
 import { CountiesList } from "@layouts/Tariffs/actions/countries";
 import DomesticAbroad from "./DomesticAbroad";
 import CityBranches from "./CityBranches";

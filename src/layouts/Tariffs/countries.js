@@ -9,7 +9,7 @@ const Countries = (props) => {
   const forCountries = () => {
     return state.data.map((item, key) => {
       return (
-        <li className="list-unstyled" key={key}>
+        <li className="list-unstyled test" key={key}>
           <Link
             onClick={() => {
               if (item.hasLiquid) {

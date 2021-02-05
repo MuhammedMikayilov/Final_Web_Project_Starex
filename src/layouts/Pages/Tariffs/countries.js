@@ -20,7 +20,7 @@ const Countries = (props) => {
                 setId(item.id);
               }
             }}
-            to="/"
+            to="#"
             style={{ color: "#000", fontSize: "16px" }}
           >
             <img

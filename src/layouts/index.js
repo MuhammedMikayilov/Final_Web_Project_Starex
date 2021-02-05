@@ -1,4 +1,4 @@
 export * from "./App";
-export * from "./HomePage";
-export * from "./Tariffs";
-export * from "./Services";
+export * from "./Pages/HomePage";
+export * from "./Pages/Tariffs"
+export * from "./Pages/Services"

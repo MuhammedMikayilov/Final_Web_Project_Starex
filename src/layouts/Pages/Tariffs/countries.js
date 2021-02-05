@@ -10,7 +10,7 @@ const Countries = (props) => {
     return state.data.map((item, key) => {
       return (
         <li
-          className={`list-unstyled ${
+          className={`list-unstyled test ${
             selectId === item.id ? "activeCountry" : ""
           }`}
           key={key}
@@ -30,7 +30,7 @@ const Countries = (props) => {
             <img
               src={process.env.PUBLIC_URL + `./images/${item.image}`}
               alt="flat"
-              className="flat"
+              className="flat test"
             />
             {item.name}
           </Link>

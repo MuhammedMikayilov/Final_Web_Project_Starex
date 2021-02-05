@@ -3,7 +3,7 @@ import { DomesticCity } from "./actions/domestic";
 import { DomesticBranches } from "./actions/domestic";
 import Districts from "./Districts";
 
-function CityBranches() {
+const CityBranches = () => {
   const [state, setState] = React.useState(DomesticCity);
   const [stateB, setStateB] = React.useState(DomesticBranches);
   //const [isLiquid, setWater] = useState(false);
@@ -76,5 +76,5 @@ function CityBranches() {
       />
     </div>
   );
-}
+};
 export default CityBranches;

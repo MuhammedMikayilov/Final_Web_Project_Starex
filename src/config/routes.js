@@ -2,6 +2,7 @@ import * as React from "react";
 import { HomePage } from "@layouts";
 import Test from "@layouts/Tariffs/Test";
 import Tariffs from "@layouts/Tariffs";
+import Services from "@layouts/Services";
 
 export const HeaderNavbar = [
   //Main Pages
@@ -154,7 +155,7 @@ export const HeaderNavbar = [
     isNavbar: true,
     index: 7,
     //Root compoenent if it is main root
-    component: (props) => <Test {...props} />,
+    component: (props) => <Services {...props} />,
   },
   {
     //Root path

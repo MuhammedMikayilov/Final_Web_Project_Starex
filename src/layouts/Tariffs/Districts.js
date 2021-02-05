@@ -1,8 +1,7 @@
 import React, { Component, useState } from "react";
 import { DomesticDistricts } from "./actions/domestic";
-import { CityBranches } from "./CityBranches";
 
-function Districts(props) {
+const Districts = (props) => {
   const [state, setState] = React.useState(DomesticDistricts);
   const { selectBranchesId, setBranchesId, selectCityId, setCityId } = props;
   //const [isLiquid, setWater] = useState(false);
@@ -23,6 +22,6 @@ function Districts(props) {
     });
   };
   return <div className="tariffs">{forDistricts()}</div>;
-}
+};
 
 export default Districts;

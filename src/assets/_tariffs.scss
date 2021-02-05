@@ -4,10 +4,13 @@
 
   .country {
     background-color: #fff;
-    padding: 20px 40px;
+    padding: 0 40px;
     margin-bottom: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
+    li {
+      padding: 20px 0;
+    }
     .flat {
       border-radius: 50%;
       height: 30px;
@@ -37,6 +40,10 @@
     h4 {
       color: white !important;
     }
+  }
+
+  .activeCountry {
+    border-bottom: 3px solid #ffab03;
   }
 }
 

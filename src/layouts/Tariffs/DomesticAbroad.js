@@ -1,6 +1,6 @@
 import React, { Component, useState } from "react";
 
-function DomesticAbroad(props) {
+const DomesticAbroad = (props) => {
   const [state, setState] = React.useState();
   const { isAbroad, setAbroad } = props;
   //const [test, test1] = React.useState(true);
@@ -44,6 +44,6 @@ function DomesticAbroad(props) {
       </div>
     </div>
   );
-}
+};
 
 export default DomesticAbroad;

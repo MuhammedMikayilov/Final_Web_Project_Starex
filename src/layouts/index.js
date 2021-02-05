@@ -1,3 +1,3 @@
 export * from "./App";
-export * from "./HomePage";
-export * from "./Tariffs"
+export * from "./Pages/HomePage";
+export * from "./Pages/Tariffs"

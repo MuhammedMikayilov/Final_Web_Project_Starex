@@ -1,6 +1,6 @@
 import React, { Component, useState } from "react";
 import { Link } from "react-router-dom";
-import {CountiesList} from "@layouts/Pages/Tariffs/actions/countries";
+import { CountiesList } from "@layouts/Pages/Tariffs/actions/countries";
 
 const Countries = (props) => {
   const { hasLiquid, hasWater, selectId, setId } = props;
@@ -9,15 +9,18 @@ const Countries = (props) => {
   const forCountries = () => {
     return state.data.map((item, key) => {
       return (
-        <li className="list-unstyled" key={key}>
+        <li
+          className={`list-unstyled ${
+            selectId === item.id ? "activeCountry" : ""
+          }`}
+        >
           <Link
             onClick={() => {
+              setId(item.id);
               if (item.hasLiquid) {
                 hasWater(true);
-                setId(item.id);
               } else {
                 hasWater(false);
-                setId(item.id);
               }
             }}
             to="#"

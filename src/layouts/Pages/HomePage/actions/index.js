@@ -136,35 +136,83 @@ export const LatestApi = {
 
     data:[
         {
+            id:1,
             image: "e-manat.jpg",
             title: "E-manatla yalnız USD balans artımı mümkündür!",
-            time: "26.01.2021"
+            time: "26.01.2021",
+            detailId: 1
         },
         {
+            id:2,
             image: "trendyol.jpg",
             title: "Bizimlə Trendyolda Türkiyə daxili karqo ödənişsiz!",
-            time: "22.01.2021"
+            time: "22.01.2021",
+            detailId: 2
         },
         {
+            id:3,
             image: "germany-card.jpg",
             title: "Almaniya anbarımız xidmətinizdədir!",
-            time: "21.01.2021"
+            time: "21.01.2021",
+            detailId: 3
         },
         {
+            id:4,
             image: "germany-card.jpg",
             title: "Almaniya anbarımız xidmətinizdədir!",
-            time: "21.01.2021"
+            time: "21.01.2021",
+            detailId: 4
         },
         {
+            id:5,
             image: "trendyol.jpg",
             title: "Bizimlə Trendyolda Türkiyə daxili karqo ödənişsiz!",
-            time: "22.01.2021"
+            time: "22.01.2021",
+            detailId: 5
         },
         {
+            id:6,
             image: "e-manat.jpg",
             title: "E-manatla yalnız USD balans artımı mümkündür!",
-            time: "26.01.2021"
+            time: "26.01.2021",
+            detailId: 6
         },
+    ]
+}
+
+export const DetailNewsApi = {
+    data: [
+        {
+            id:1,
+            description: "" +
+                "Dəyərli müştərilərimiz, bağlamalarınız xarici anbarda sistemə daxil edildikdə e.customs.az və ya \"Smart Customs\" tətbiqindən daxil olub bəyannamənizi təsdiqləməlisiniz.\n" +
+                "\n" +
+                "‼️“Smart Customs”da bağlamanın bəyan edilməsi ilə bağlı vacib olan məqamlar!\n" +
+                "\n" +
+                "1. Bağlamanızı bəyan etmək üçün e.customs.az və ya \"Smart Customs\" tətbiqində öz adınıza olan nömrə ilə qeydiyyatdan keçməlisiniz.\n" +
+                "\n" +
+                "2. “Starex” hesabınızda qeyd etdiyiniz FİN kodla “Smart Customs” tətbiqindəki FİN kod eyni olmalıdır.\n" +
+                "\n" +
+                "3. Bağlamanız “xarici anbar” statusuna keçdikdən sonra sizə təqdim edilən bağlama izləmə kodu ilə bəyannamənizi e.customs.az və ya \"Smart Customs\" tətbiqində təsdiq etməlisiniz.\n" +
+                "\n" +
+                "4. Tracking nömrə, mağaza adı “Starex” hesabınızda qeyd olunan qayda ilə yazmalısınız.\n" +
+                "\n" +
+                "5. Bəyannaməni \"Smart Customs\" mobil tətbiqdən əlavə etdikdə məhsulun ödənişi və çatdırılma ödənişini cəm olaraq, e.customs.az saytından bəyan etdikdə isə malın invoys qiyməti olaraq məhsulunuzun ödənişini qeyd etməlisiniz. Daşınma xərci avtomatik qeyd edilir. Məbləğ USD olaraq qeyd edilməlidir.\n" +
+                "\n" +
+                "📌 Qeyd edək ki,yanvar ayında yola düşən və gömrük yoxlanışında olan bağlamalar üçün “Smart Customs” tətbiqində bəyannamə əlavə etməyinizə ehtiyac yoxdur."
+        },
+        {
+            id: 2,
+            description: "Əziz müştərilər, 3 Fevral tarixindən 31 mart tarixinədək" +
+                " 28 May filialımızdan yaradılan Bakıdaxili bütün kuryer sifarişləri 1 AZN olacaqdır.\n" +
+                "\n" +
+                "Evinizdən çıxmadan bağlamanızı təhvil ala bilərsiniz. Siz sifariş edin, qapınızadək gətirək!\n" +
+                "\n" +
+                "\n" +
+                "QEYD: \n" +
+                "Bu kampaniya yalnız 28 May filialımız üçün keçərlidir.\n" +
+                "Kampaniya poçt göndərişlərinə şamil edilmir."
+        }
     ]
 }
 

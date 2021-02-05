@@ -3,9 +3,7 @@ import React, { Component, useState } from "react";
 const DomesticAbroad = (props) => {
   const [state, setState] = React.useState();
   const { isAbroad, setAbroad } = props;
-  //const [test, test1] = React.useState(true);
-
-  //console.log(isAbroad);
+  
   return (
     <div className="row d-flex justify-content-center mb-5 mt-4 text-center">
       <div
@@ -17,7 +15,6 @@ const DomesticAbroad = (props) => {
           boxShadow: "0 2px 4px rgba(0,0,0,.1)",
         }}
         onClick={() => {
-          //test1(true);
           setAbroad(true);
         }}
       >
@@ -34,7 +31,6 @@ const DomesticAbroad = (props) => {
           boxShadow: "0 2px 4px rgba(0,0,0,.1)",
         }}
         onClick={() => {
-          //test1(false);
           setAbroad(false);
         }}
       >

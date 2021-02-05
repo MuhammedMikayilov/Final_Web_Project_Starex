@@ -17,11 +17,12 @@ const Countries = (props) => {
         >
           <Link
             onClick={() => {
-              setId(item.id);
               if (item.hasLiquid) {
                 hasWater(true);
+                setId(item.id);
               } else {
                 hasWater(false);
+                setId(item.id);
               }
             }}
             to="#"

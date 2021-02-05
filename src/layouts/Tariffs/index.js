@@ -28,22 +28,6 @@ const Tariffs = () => {
       }
     });
   };
-  // const forProduct = () => {
-  //   return state.data.map((item, key) => {
-  //     if (!item.isLiquid && selectId == item.countryId) {
-  //       return (
-  //         <div className="tariffList d-flex justify-content-between" key={key}>
-  //           <div className="weightRange">
-  //             <p className="m-0">{item.weight}</p>
-  //           </div>
-  //           <div className="price">
-  //             <p className="m-0">$ {item.price}</p>
-  //           </div>
-  //         </div>
-  //       );
-  //     }
-  //   });
-  // };
   const forOtherCountry = () => {
     return state.data.map((item, key) => {
       if (!item.isLiquid && selectId == item.countryId) {

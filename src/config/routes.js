@@ -5,6 +5,7 @@ import Stores from "@layouts/Pages/Stores";
 import News from "@layouts/Pages/News";
 import Test from "@layouts/Pages/Tariffs/Test";
 import NewsDetail from "@layouts/Pages/News/Details/Detail";
+import Services from "@layouts/Pages/Services";
 
 export const HeaderNavbar = [
   //Main Pages
@@ -156,7 +157,7 @@ export const HeaderNavbar = [
     isNavbar: true,
     index:7,
     //Root compoenent if it is main root
-    component: (props) => <Test {...props} />
+    component: (props) => <Services {...props} />
   },
   {
     //Root path

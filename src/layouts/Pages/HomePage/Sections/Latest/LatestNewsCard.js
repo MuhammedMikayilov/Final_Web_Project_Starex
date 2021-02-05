@@ -11,7 +11,10 @@ const LatestNewsCard = (props)=> {
                     if (key<count){
                       return (
                           <div className='col-md-4' key={key}>
-                              <Link to="/details" className="news" >
+                              <Link to={{
+                                  pathname: "/details",
+                                  state: item
+                              }} className="news" >
                                   <div className="card">
                                       <img
                                           className="card-img-top"

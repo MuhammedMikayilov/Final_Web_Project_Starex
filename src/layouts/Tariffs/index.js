@@ -10,7 +10,7 @@ const Tariffs = () => {
   const [isLiquid, setWater] = useState(false);
   const [hasLiquid, hasWater] = useState(true);
   const [isAbroad, setAbroad] = useState(true);
-  //console.log(isAbroad);
+  
   const [selectId, setId] = useState(CountiesList.data[0].id);
   const forWater = () => {
     return state.data.map((item, key) => {

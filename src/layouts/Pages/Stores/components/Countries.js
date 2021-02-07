@@ -18,7 +18,7 @@ const Countries = (props)=> {
                         setCountryId(item.id)
                     }}
                 >
-                    <img src={process.env.PUBLIC_URL + item.image} alt="img"/>
+                    <img src={process.env.PUBLIC_URL + `./images/${item.image}`} alt="img"/>
                     <p className='text-center'>{item.name}</p>
                 </div>
             ))}

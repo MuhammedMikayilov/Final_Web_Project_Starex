@@ -28,7 +28,7 @@ export const Footer = (props) => {
         <footer className="frame-header">
             <div  style={{background:"#3a3a3a"}} className="row h-100 m-0 p-5">
                 <div className="col-12 row align-items-center">
-                   <div className="col-md-3">
+                   <div className="col-md-3 text-center">
                        <Link to='/'>
                            <img
                                src={process.env.PUBLIC_URL + `./images/${state.logoDark}`}
@@ -37,18 +37,18 @@ export const Footer = (props) => {
                            />
                        </Link>
                    </div>
-                    <div className="col-md-3">
+                    <div className="col-md-3 d-none d-md-block">
                         <ul>
                             {renderFooterFirst(4)}
                         </ul>
                     </div>
-                    <div className="col-md-3">
+                    <div className="col-md-3 d-none d-md-block">
                         <ul>
                             {renderFooterSecond(4)}
                         </ul>
                     </div>
-                    <div className="col-md-3">
-                        <ul>
+                    <div className="col-md-3 text-md-left text-center">
+                        <ul className='store-apps'>
                             <li className='mb-3'>
                                 <a href='https://apps.apple.com/az/app/starex-kargo/id1459518540' target="_blank">
                                     <img className='img-fluid' src={process.env.PUBLIC_URL + "./images/appleStore.png"} alt=""/>
@@ -63,9 +63,9 @@ export const Footer = (props) => {
                     </div>
                 </div>
             </div>
-            <div className='row px-5 py-3'>
-                <div className='col-md-6'>© 2020 Starex MMC | Bütün Hüquqlar Qorunur</div>
-                <div className='col-md-6 text-end'>
+            <div className='row px-5 py-3 footer-bottom'>
+                <div className='col-md-6 text-md-start text-center mb-3'>© 2020 Starex MMC | Bütün Hüquqlar Qorunur</div>
+                <div className='col-md-6 text-md-end text-center'>
                     <img className={'img-fluid'} src={process.env.PUBLIC_URL + "./images/payments.png"} alt=""/>
                 </div>
             </div>

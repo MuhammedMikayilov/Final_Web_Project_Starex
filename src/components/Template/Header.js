@@ -3,10 +3,12 @@ import {Link} from "react-router-dom";
 import HeaderTop from "@components/Template/components/HeaderTop";
 import HeaderBottom from "@components/Template/components/HeaderBottom";
 import {HeaderNavbar} from "@config";
+import HeaderMobile from "@components/Template/components/HeaderMobile";
 
 export const Header = (props) => {
 
     const {renderLink, renderPages} = props;
+    const [fadeAnimation, setAnimation] = React.useState(false)
 
     const renderLinks = () => {
         return HeaderNavbar.map((link, key) => (
@@ -24,16 +26,16 @@ export const Header = (props) => {
 
   return (
       <header>
+          <HeaderMobile />
          <HeaderTop renderLinks={renderLink} renderPages={renderPages}/>
          <HeaderBottom />
           <nav className="navbar navbar-expand-lg navbar-light" style={{backgroundColor:"#005fb5"}}>
-              <div className="container">
-                  <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                      <span className="navbar-toggler-icon"/>
-                  </button>
-                  <div className="collapse navbar-collapse row" id="navbarNav">
-                      <ul className="navbar-nav">
+              <div className="container text-end">
+                  <div onClick={()=>setAnimation(!fadeAnimation)} className='hamburger w-100 mb-3 d-block d-md-none'>
+                      {!fadeAnimation ? <i className="fas fa-bars"/> : <i className="fas fa-times"/>}
+                  </div>
+                  <div className={`row ${fadeAnimation ? "showNav":"hideNav"}`} id="navbarNav">
+                      <ul className="navbar-nav w-100 text-end">
                           {renderLinks()}
                       </ul>
                   </div>

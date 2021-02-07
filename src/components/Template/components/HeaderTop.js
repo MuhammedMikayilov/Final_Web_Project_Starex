@@ -5,9 +5,9 @@ import {Link} from "react-router-dom";
 const HeaderTop = (props) => {
     const {renderLinks, renderPages} = props;
     return (
-        <nav className="navbar navbar-expand-lg navbar-light" style={{backgroundColor:"#f7f7f7"}}>
+        <nav className="header-top navbar navbar-expand-lg navbar-light" style={{backgroundColor:"#f7f7f7"}}>
             <div className="container">
-                   <span className="icons">
+                   <span className="icons d-none d-md-block">
                           <ul className='d-flex'>
                               <li className='mr-1'>
                                   <a className={'facebook'} href="https://www.facebook.com/" target="_blank">
@@ -21,17 +21,12 @@ const HeaderTop = (props) => {
                               </li>
                           </ul>
                       </span>
-
-                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"/>
-                </button>
-                <div className="collapse navbar-collapse row" id="navbarNav">
-                    <ul className="navbar-nav col-md-9">
+                <div className="header-top d-flex row" id="navbarNav">
+                    <ul className="link-nav navbar-nav col-md-9 d-md-flex d-none">
                         {renderLinks}
                     </ul>
 
-                    <div className='col-md-3'>
+                    <div className='col-md-3 col-12'>
                         <ul className="navbar-nav">
                             {renderPages}
                         </ul>

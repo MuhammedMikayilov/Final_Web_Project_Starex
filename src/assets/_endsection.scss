@@ -71,3 +71,13 @@
     z-index: 0;
   }
 }
+
+@media (max-width: 600px) {
+  .phone{
+    font-size: 30px !important;
+  }
+
+  .endSection{
+    padding: 100px 0 !important;
+  }
+}

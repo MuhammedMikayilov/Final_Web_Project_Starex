@@ -21,7 +21,7 @@ const Intro = (props)=> {
                 <div className="container my-2">
                     <div>
                             {state.data.map((item, key)=>{
-                                return <div key={key} className='text-center' dangerouslySetInnerHTML={createMarkup(item.title)} />
+                                return <div key={key} className='text-center h1' dangerouslySetInnerHTML={createMarkup(item.title)} />
                             })}
                     </div>
                     <div className='row mt-5'>

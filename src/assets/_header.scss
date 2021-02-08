@@ -75,9 +75,13 @@ nav .icons {
   color: white;
 }
 
-@media only screen and (max-width: 767px) {
+
+
+@media only screen and (max-width: 993px) {
   .showNav{display: block}
   .hideNav{display: none}
+  .aboutNav{display: none !important;}
+  .logo{text-align: center !important}
 }
 
 

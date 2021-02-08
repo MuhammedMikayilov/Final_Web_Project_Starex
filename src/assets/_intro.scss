@@ -109,6 +109,21 @@
   }
 
   .hidden{opacity: 0}
-
   }
+
+@media only screen and (max-width: 767px) {
+  .intro{
+    padding: 100px 50px !important;
+    .h1{
+      font-size: 18px;
+      line-height: 30px;
+
+      h2{
+        font-size: 19px;
+        letter-spacing: 5px;
+        line-height: 40px;
+      }
+    }
+  }
+}
 

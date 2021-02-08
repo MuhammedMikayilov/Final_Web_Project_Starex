@@ -41,7 +41,7 @@ const HeaderBottom = (props) => {
                                 />
                             </Link>
                         </div>
-                        <div className='col-md-6 d-none d-md-block'>
+                        <div className='col-md-6 d-none d-md-block aboutNav'>
                             <ul className='navbar-nav'>
                                 {navRender()}
                             </ul>

@@ -45,6 +45,17 @@
   .activeCountry {
     border-bottom: 3px solid #ffab03;
   }
+
+  .countryTariffs {
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    h4 {
+      color: #a9a9a9;
+    }
+  }
 }
 
 // # # # # # # # # # # # # # # RESPONSIVE # # # # # # # # # # # # # # //
@@ -52,10 +63,14 @@
 @media (max-width: 768px) {
   #tariffsSection {
     .country {
-      padding: 20px !important;
+      //padding: 20px !important;
 
       .flat {
         margin-right: 7px;
+      }
+
+      .branchsContact {
+        display: block !important;
       }
     }
     .tariffs .tariffList {
@@ -71,7 +86,7 @@
 @media (max-width: 576px) {
   #tariffsSection {
     .country {
-      padding: 15px !important;
+      //padding: 15px !important;
 
       .flat {
         height: 20px;
@@ -81,6 +96,11 @@
       .countryLink {
         font-size: 12px;
       }
+    }
+  }
+  .countryTariffs {
+    h4 {
+      font-size: 14px;
     }
   }
 }

@@ -5,6 +5,8 @@ export const BranchsContactList = {
       adress: "(Fikrət Əmirov küç. 6, 28 May metrosunun yaxınlığı)",
       phone: "0123100825",
       time: "B.e.- Ş. 10:00-19:00",
+      map:
+        "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d379.93462844159745!2d49.851557!3d40.376119!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7aaf4f6f14f0775b!2z0JTQvtC8INC40L3RgtC10LvQu9C10LrRgtCw!5e0!3m2!1sen!2sus!4v1612787020918!5m2!1sen!2sus",
       branchsId: 1,
     },
     {
@@ -12,6 +14,9 @@ export const BranchsContactList = {
       adress: "(Atatürk prospekti, 4A, Gənclik metrosunun yanı)",
       phone: "0123100825",
       time: "B.e.- Ş. 10:00-19:00",
+      map:
+        "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d379.93462844159745!2d49.851557!3d40.376119!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7aaf4f6f14f0775b!2z0JTQvtC8INC40L3RgtC10LvQu9C10LrRgtCw!5e0!3m2!1sen!2sus!4v1612787020918!5m2!1sen!2sus",
+
       branchsId: 2,
     },
     {
@@ -19,6 +24,9 @@ export const BranchsContactList = {
       adress: "(Xətai rayonu, Məhəmməd Hadi küçəsi 2)",
       phone: "0123100825",
       time: "B.e.- Ş. 10:00-19:00",
+      map:
+        "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d379.93462844159745!2d49.851557!3d40.376119!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7aaf4f6f14f0775b!2z0JTQvtC8INC40L3RgtC10LvQu9C10LrRgtCw!5e0!3m2!1sen!2sus!4v1612787020918!5m2!1sen!2sus",
+
       branchsId: 3,
     },
     {
@@ -26,6 +34,9 @@ export const BranchsContactList = {
       adress: "(Şərifzadə küçəsi 174)",
       phone: "0123100825",
       time: "B.e.- Ş. 10:00-19:00",
+      map:
+        "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d379.93462844159745!2d49.851557!3d40.376119!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7aaf4f6f14f0775b!2z0JTQvtC8INC40L3RgtC10LvQu9C10LrRgtCw!5e0!3m2!1sen!2sus!4v1612787020918!5m2!1sen!2sus",
+
       branchsId: 4,
     },
     {
@@ -33,6 +44,9 @@ export const BranchsContactList = {
       adress: "(Bakı küçəsi 107, Aviakassanın yanı)",
       phone: "0123100825",
       time: "B.e.- Ş. 10:00-19:00",
+      map:
+        "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d379.93462844159745!2d49.851557!3d40.376119!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7aaf4f6f14f0775b!2z0JTQvtC8INC40L3RgtC10LvQu9C10LrRgtCw!5e0!3m2!1sen!2sus!4v1612787020918!5m2!1sen!2sus",
+
       branchsId: 5,
     },
     {
@@ -41,6 +55,9 @@ export const BranchsContactList = {
         "(Nəriman Nərimanov küçəsi 298F, Köhnə Yevlax avtovağzalı ilə üzbəüz)",
       phone: "0123100825",
       time: "B.e.- Ş. 10:00-19:00",
+      map:
+        "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d379.93462844159745!2d49.851557!3d40.376119!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7aaf4f6f14f0775b!2z0JTQvtC8INC40L3RgtC10LvQu9C10LrRgtCw!5e0!3m2!1sen!2sus!4v1612787020918!5m2!1sen!2sus",
+
       branchsId: 6,
     },
   ],

@@ -6,6 +6,7 @@ import { DomesticAbroadList } from "../Tariffs/actions/index";
 import { DomesticBranches } from "../Tariffs/actions/domestic";
 import { BranchsContactList } from "../Contact/actions/index";
 import { CountriesContactList } from "../Contact/actions/index";
+import Iframe from "react-iframe";
 
 const Contact = () => {
   const [state, setState] = React.useState(DomesticBranches);
@@ -57,6 +58,18 @@ const Contact = () => {
             <div className="price d-flex pb-3">
               <i className="fas fa-phone-alt pr-4"></i>
               <p className="m-0">{item.time}</p>
+            </div>
+            <div style={{ width: "100%", height: "100%" }}>
+              <Iframe
+                src={item.map}
+                width="100%"
+                height="450"
+                frameBorder="0"
+                style="border:0;"
+                allowFullScreen=""
+                aria-hidden="false"
+                tabIndex="0"
+              ></Iframe>
             </div>
           </div>
         );

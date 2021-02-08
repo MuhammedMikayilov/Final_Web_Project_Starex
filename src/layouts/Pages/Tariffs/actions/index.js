@@ -58,3 +58,24 @@ export const ContainsLiquid = {
     },
   ],
 };
+
+export const DomesticAbroadList = {
+  data: [
+    {
+      id: 1,
+      title: "Ölkə xaricindən Daşınma tarifləri",
+    },
+    {
+      id: 2,
+      title: "Ölkədaxili Kuryer tarifləri",
+    },
+    {
+      id: 3,
+      title: "ANBARLAR",
+    },
+    {
+      id: 4,
+      title: "FILIALLAR",
+    },
+  ],
+};

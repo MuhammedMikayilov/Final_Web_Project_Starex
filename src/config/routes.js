@@ -6,6 +6,8 @@ import News from "@layouts/Pages/News";
 import Test from "@layouts/Pages/Tariffs/Test";
 import NewsDetail from "@layouts/Pages/News/Details/Detail";
 import Services from "@layouts/Pages/Services";
+import Register from "@layouts/Pages/LoginForm/components/Register";
+import Login from "@layouts/Pages/LoginForm/components/Login";
 
 export const HeaderNavbar = [
   //Main Pages
@@ -68,7 +70,7 @@ export const HeaderNavbar = [
     isLoginPanel: true,
     index: 0,
     //Root compoenent if it is main root
-    component: (props) => <Test {...props} />
+    component: (props) => <Login {...props} />
   },
   {
     //Root path
@@ -80,7 +82,7 @@ export const HeaderNavbar = [
     isLoginPanel: true,
     index: 0,
     //Root compoenent if it is main root
-    component: (props) => <Test {...props} />
+    component: (props) => <Register {...props} />
   },
 
   //  Navbars Pages
@@ -191,5 +193,4 @@ export const HeaderNavbar = [
     //Root compoenent if it is main root
     component: (props) => <NewsDetail {...props} />
   },
-
 ]

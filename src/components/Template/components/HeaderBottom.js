@@ -8,7 +8,7 @@ const HeaderBottom = (props) => {
         return state.data.map((item, key)=>(
             <li key={key} className='nav-item ml-3'>
                 <div className='row' id='infoDate'>
-                    <div className='icon col-md-3'>
+                    <div className='icon icon-header-info col-md-3'>
                         <i className={item.icon}/>
                     </div>
                     <div className='col-md-9'>
@@ -29,14 +29,10 @@ const HeaderBottom = (props) => {
         ))
     }
         return (
-            <nav className="navbar navbar-expand-lg bg-white py-0" style={{backgroundColor:"#f7f7f7"}}>
+            <nav className="header-center d-block navbar navbar-expand-lg bg-white py-0" style={{backgroundColor:"#f7f7f7"}}>
                 <div className="container">
-                    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"/>
-                    </button>
-                    <div className="collapse navbar-collapse row bd-highlight" id="navbarNav">
-                        <div className="logo col-md-6">
+                    <div className="shows row w-100">
+                        <div className="logo col-md-6 text-center text-md-left">
                             <Link to="/">
                                 <img
                                     src={process.env.PUBLIC_URL+ `./images/${state.logo}`}
@@ -45,7 +41,7 @@ const HeaderBottom = (props) => {
                                 />
                             </Link>
                         </div>
-                        <div className='col-md-6'>
+                        <div className='col-md-6 d-none d-md-block aboutNav'>
                             <ul className='navbar-nav'>
                                 {navRender()}
                             </ul>

@@ -1,5 +1,5 @@
 
- nav .icons {
+nav .icons {
    ul{
      margin: 0!important;
      margin-right: 3rem !important;
@@ -34,3 +34,55 @@
    }
  }
  nav #navbarNav li a{color: #666; &:hover{color: #005fb5}}
+
+.header-mobile{
+  background-color: #ffab03;
+  position: relative;
+  padding: 20px 0;
+
+  &::before{
+    background-color: #0085e2;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 70%;
+  }
+  .header-mobile-title{
+    color: #fff;
+    letter-spacing: 1.5px;
+    line-height: 1.3;
+    font-size: 18px;
+    text-align: center;
+    margin-left: 24%;
+  }
+  .close-btn{
+    font-size: 25px;
+    color: white;
+  }
+}
+.header-top{
+  .link-nav{
+    //display: flex !important;
+    left: -27% !important;
+    top: 8px !important;
+  }
+}
+.hamburger{
+  color: white;
+}
+
+
+
+@media only screen and (max-width: 993px) {
+  .showNav{display: block}
+  .hideNav{display: none}
+  .aboutNav{display: none !important;}
+  .logo{text-align: center !important}
+}
+
+
+

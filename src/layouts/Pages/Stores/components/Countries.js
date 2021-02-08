@@ -7,7 +7,7 @@ const Countries = (props)=> {
     const countryRef = React.useRef();
 
     return (
-        <section className='p-5 country-store'>
+        <section className='p-5 country-store text-center text-md-left'>
             {countries.data.map((item,key)=>(
                 <div
                     key={key}
@@ -18,7 +18,7 @@ const Countries = (props)=> {
                         setCountryId(item.id)
                     }}
                 >
-                    <img src={process.env.PUBLIC_URL + item.image} alt="img"/>
+                    <img src={process.env.PUBLIC_URL + `./images/${item.image}`} alt="img"/>
                     <p className='text-center'>{item.name}</p>
                 </div>
             ))}

@@ -8,7 +8,7 @@ const TitleDetail = (props)=> {
             <div className="container">
                 <h1>{item.title}</h1>
                 <p>
-                    <Link to="/">Əsas</Link> / {item.title}
+                    <Link className='link' to="/">Əsas</Link> / {item.title}
                 </p>
             </div>
         </section>

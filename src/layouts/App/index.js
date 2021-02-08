@@ -56,6 +56,7 @@ export const App = () => {
             >
                 <Link
                     to={link.path}
+                    className='link-header-top'
                 >{link.name}</Link>
             </li>
         ));

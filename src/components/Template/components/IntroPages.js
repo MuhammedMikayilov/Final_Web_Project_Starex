@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import {Lang} from "@plugins";
 import {Link} from "react-router-dom";
 
 const IntroPages = (props)=> {

@@ -40,7 +40,7 @@ const Selections = (props) => {
                </div>
 
            </div>
-           <div className="col-md-4">
+           <div className="col-md-4 mt-3 mt-md-0">
                <div className="wrap">
                    <div className='form-group inputWeight'>
                        <input
@@ -63,7 +63,7 @@ const Selections = (props) => {
                    </div>
                </div>
            </div>
-           <div className="col-md-4">
+           <div className="col-md-4 mt-3 mt-md-0">
                <div className="wrap priceDelivery">
                    <div className='message'>{Lang.get("Çatdırılma qiyməti")}</div>
                    <div className="value">

@@ -10,7 +10,7 @@ const Store = (props)=> {
                 {state.data.map((item, key)=>{
                     if(item.countryId === countryId){
                         return (
-                            <div className="store col-md-2" key={key}>
+                            <div className="store col-md-2 col-6" key={key}>
                                 <div className="item">
                                     <a href={item.link} target="_blank">
                                         <div className="wrapper-img">

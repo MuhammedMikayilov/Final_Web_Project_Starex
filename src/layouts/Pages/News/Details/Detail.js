@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {DetailNewsApi} from "@layouts/Pages/HomePage/actions";
 import TitleDetail from "@layouts/Pages/News/Details/component/TitleDetail";
+import BodyDetail from "@layouts/Pages/News/Details/component/BodyDetail";
 
 const NewsDetail = (props) =>{
     const [state, setState] = React.useState(DetailNewsApi)
@@ -13,6 +14,7 @@ const NewsDetail = (props) =>{
                         return (
                             <div className='detail-news'>
                                 <TitleDetail item={item}/>
+                                <BodyDetail item={item} detailItem={detailItem}/>
                             </div>
                         )
                     }

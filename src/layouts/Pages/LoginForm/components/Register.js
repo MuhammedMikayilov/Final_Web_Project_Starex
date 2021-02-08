@@ -18,7 +18,8 @@ const Register = (props)=> {
         phone: "",
         email:"",
         password:"",
-        confirmPassword: ""
+        confirmPassword: "",
+        test:"dsa"
     }
     const [branche,updateBranche] = React.useState(DomesticBranches)
 

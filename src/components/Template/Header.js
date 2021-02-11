@@ -1,28 +1,26 @@
 import * as React from "react";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import HeaderTop from "@components/Template/components/HeaderTop";
 import HeaderBottom from "@components/Template/components/HeaderBottom";
-import {HeaderNavbar} from "@config";
+import { HeaderNavbar } from "@config";
 import HeaderMobile from "@components/Template/components/HeaderMobile";
 
 export const Header = (props) => {
+  const { renderLink, renderPages } = props;
+  const [fadeAnimation, setAnimation] = React.useState(false);
 
-    const {renderLink, renderPages} = props;
-    const [fadeAnimation, setAnimation] = React.useState(false)
-
-    const renderLinks = () => {
-        return HeaderNavbar.map((link, key) => (
-            link.isNavbar &&
-            <li
-                className="nav-item mr-4"
-                key={key}
-            >
-                <Link
-                    to={link.path}
-                ><h4 className="text-white">{link.name}</h4></Link>
-            </li>
-        ));
-    };
+  const renderLinks = () => {
+    return HeaderNavbar.map(
+      (link, key) =>
+        link.isNavbar && (
+          <li className="nav-item mr-4" key={key}>
+            <Link to={link.path}>
+              <h4 className="text-white">{link.name}</h4>
+            </Link>
+          </li>
+        )
+    );
+  };
 
   return (
       <header>

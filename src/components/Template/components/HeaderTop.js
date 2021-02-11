@@ -1,9 +1,11 @@
-import React, {Component} from 'react';
+import React, {Component, useState} from 'react';
 import {HeaderNavbar} from "@config";
 import {Link} from "react-router-dom";
+import {LoginApi} from "@layouts/Pages/LoginForm/actions";
 
 const HeaderTop = (props) => {
     const {renderLinks, renderPages} = props;
+    const [state, setState] = useState(LoginApi)
     return (
         <nav className="header-top navbar navbar-expand-lg navbar-light" style={{backgroundColor:"#f7f7f7"}}>
             <div className="container">
@@ -21,15 +23,16 @@ const HeaderTop = (props) => {
                               </li>
                           </ul>
                       </span>
-                <div className="header-top d-flex row" id="navbarNav">
+                <div className="header-tops d-flex row" id="navbarNav">
                     <ul className="link-nav navbar-nav col-md-9 d-md-flex d-none">
                         {renderLinks}
                     </ul>
 
                     <div className='col-md-3 col-12'>
-                        <ul className="navbar-nav">
+                        <ul className={`navbar-nav ${state.isLogin? "d-none" : ""}`}>
                             {renderPages}
                         </ul>
+                        <div className={`${state.isLogin?"":"d-none"}`}>username</div>
                     </div>
                 </div>
             </div>

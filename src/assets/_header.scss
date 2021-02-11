@@ -31,6 +31,7 @@ nav .icons {
    i{
      position: absolute;
      top:55%;
+     font-size: 26px;
    }
  }
  nav #navbarNav li a{color: #666; &:hover{color: #005fb5}}
@@ -73,6 +74,25 @@ nav .icons {
 }
 .hamburger{
   color: white;
+}
+
+.link-form{
+  .form-link{
+    color: #666666;
+  }
+
+  &:first-child{
+    position: relative;
+    &::after{
+      content: "";
+      width: 1px;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: -13px;
+      background: #b1b1b1;
+    }
+  }
 }
 
 

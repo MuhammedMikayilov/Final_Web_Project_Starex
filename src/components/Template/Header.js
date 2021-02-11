@@ -27,8 +27,8 @@ export const Header = (props) => {
   return (
       <header>
           <HeaderMobile />
-         <HeaderTop renderLinks={renderLink} renderPages={renderPages}/>
-         <HeaderBottom />
+         {/*<HeaderTop renderLinks={renderLink} renderPages={renderPages}/>*/}
+         <HeaderBottom renderLinks={renderLink} renderPages={renderPages}/>
           <nav className="navbar navbar-expand-lg navbar-light" style={{backgroundColor:"#005fb5"}}>
               <div className="container text-end">
                   <div onClick={()=>setAnimation(!fadeAnimation)} className='hamburger w-100 mb-3 d-block d-md-none'>

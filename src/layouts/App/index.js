@@ -65,10 +65,11 @@ export const App = () => {
         return HeaderNavbar.map((link, key) => (
             link.isLoginPanel &&
             <li
-                className="nav-item mr-4"
+                className="nav-item mr-4 link-form"
                 key={key}
             >
                 <Link
+                    className='form-link'
                     to={link.path}
                 >{link.name}</Link>
             </li>
@@ -84,7 +85,7 @@ export const App = () => {
         {/* You must add your default root here */}
         <Redirect from="*" to="/" />
       </Switch>
-      <Footer activeRoute={'Test'} renderLink={renderLink()} renderPages={renderPages()}/>
+      <Footer renderLink={renderLink()} renderPages={renderPages()}/>
     </AppProvider>
   );
 };

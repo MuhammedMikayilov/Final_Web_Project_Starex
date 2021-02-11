@@ -10,7 +10,6 @@ export const Footer = (props) => {
 
     const renderFooterFirst = (num)=>{
        return HeaderNavbar.map((item, key)=> {
-           console.log("m",num)
             if (item.index <= num && item.index !==0){
                return <li key={key}><Link to={item.path}>{item.name}</Link></li>
             }
@@ -18,7 +17,6 @@ export const Footer = (props) => {
     }
     const renderFooterSecond = (num)=>{
        return HeaderNavbar.map((item, key)=> {
-           console.log("m",num)
            if (item.index > num && item.index !==0){
                return <li key={key}><Link to={item.path}>{item.name}</Link></li>
            }

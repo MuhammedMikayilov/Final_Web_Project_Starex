@@ -1,11 +1,13 @@
 import React, {Component} from 'react';
-import {LoginApi} from "@layouts/Pages/LoginForm/actions";
+import {ActiveUser, LoginApi} from "@layouts/Pages/LoginForm/actions";
 import {DomesticBranches} from "@layouts/Pages/Tariffs/actions/domestic";
 import {Link} from "react-router-dom";
 import Title from "@layouts/Pages/LoginForm/components/Title";
+import {useHistory} from "react-router";
 
 const Register = (props)=> {
     const [state, setState] = React.useState(LoginApi)
+    const history = useHistory()
     const initialState = {
         firstname: "",
         lastname: "",
@@ -22,6 +24,8 @@ const Register = (props)=> {
         test:"dsa"
     }
     const [branche,updateBranche] = React.useState(DomesticBranches)
+    const [activeUser, setActiveUser] = React.useState(ActiveUser)
+
 
     const onClick = (e)=>{
         if
@@ -32,7 +36,10 @@ const Register = (props)=> {
             initialState.password !== "")
         {
             state.data.push(initialState)
-            // location.pathname = "/"
+            history.push("/cabinet")
+            setActiveUser(activeUser.firstname = initialState.firstname)
+            setActiveUser(activeUser.lastname = initialState.lastname)
+            setActiveUser(activeUser.code = initialState.code)
             console.log(state.data)
         }
     }

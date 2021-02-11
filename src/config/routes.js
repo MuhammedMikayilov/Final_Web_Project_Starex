@@ -9,6 +9,7 @@ import Services from "@layouts/Pages/Services";
 import Register from "@layouts/Pages/LoginForm/components/Register";
 import Login from "@layouts/Pages/LoginForm/components/Login";
 import Contact from "@layouts/Pages/Contact";
+import Cabinet from "@layouts/Cabinet";
 
 export const HeaderNavbar = [
   //Main Pages
@@ -30,9 +31,10 @@ export const HeaderNavbar = [
     path: "/about",
     //Root name which renders in Header
     name: "Haqqımızda",
-    isHeader: true,
+    isHeader: false,
     //If root is exact root
     isExact: true,
+    isNavbar: true,
     index: 1,
     //Root compoenent if it is main root
     component: (props) => <Test {...props} />,
@@ -165,18 +167,6 @@ export const HeaderNavbar = [
   },
   {
     //Root path
-    path: "/responsibility",
-    //Root name which renders in Header
-    name: "Sosial məsuliyyət",
-    //If root is exact root
-    isExact: true,
-    isNavbar: true,
-    index: 0,
-    //Root compoenent if it is main root
-    component: (props) => <Test {...props} />,
-  },
-  {
-    //Root path
     path: "/contact",
     //Root name which renders in Header
     name: "Əlaqə",
@@ -194,5 +184,12 @@ export const HeaderNavbar = [
     //If root is exact root
     //Root compoenent if it is main root
     component: (props) => <NewsDetail {...props} />,
+  },
+  {
+    //Root path
+    path: "/cabinet",
+    //If root is exact root
+    //Root compoenent if it is main root
+    component: (props) => <Cabinet {...props} />,
   },
 ];

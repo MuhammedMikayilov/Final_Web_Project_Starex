@@ -132,7 +132,7 @@ black-dashboard-react
         ├── Map.js
         ├── Notifications.js
         ├── Rtl.js
-        ├── TableList.js
+        ├── NewsList.js
         ├── Typography.js
         └── UserProfile.js
 ```

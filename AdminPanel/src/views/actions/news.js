@@ -1,11 +1,13 @@
 import axios from "axios";
 
-export const getNewsList = async (state, setState) => {
-    let list = await  axios.get("http://localhost:50725/api/news")
+const link = "http://localhost:50725/api/news"
 
-    if(list.status === 200){
+export const getNewsList = async (state, setState) => {
+    let list = await  axios.get(`${link}`)
+
+    if(list.status === 200)
         setState({...state, data: list.data})
-    }
+
 }
 
 export const createNewsData = async (title, image) => {
@@ -14,7 +16,7 @@ export const createNewsData = async (title, image) => {
         image: image,
         isDeleted: false
     }
-    await axios.post("http://localhost:50725/api/news", data)
+    await axios.post(`${link}`, data)
 }
 
 export const updateNewsData = async (title, image, id) => {
@@ -23,9 +25,9 @@ export const updateNewsData = async (title, image, id) => {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ title: title, image: image })
     };
-    await fetch(`http://localhost:50725/api/news/${id}`, requestOptions)
+    await fetch(`${link}/${id}`, requestOptions)
 }
 
 export const deleteNewsData = async (state, setState, id) => {
-    let res = await fetch(`http://localhost:50725/api/news/${id}`, { method: 'DELETE' })
+     await fetch(`${link}/${id}`, { method: 'DELETE' })
 }

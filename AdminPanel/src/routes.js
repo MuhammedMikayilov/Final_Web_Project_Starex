@@ -19,7 +19,7 @@ import Dashboard from "views/Dashboard.js";
 import Icons from "views/Icons.js";
 import Map from "views/Map.js";
 import Notifications from "views/Notifications.js";
-import TableList from "views/TableList.js";
+import NewsList from "views/NewsList.js";
 import Typography from "views/Typography.js";
 import UserProfile from "views/UserProfile.js";
 
@@ -65,11 +65,11 @@ var routes = [
     layout: "/admin",
   },
   {
-    path: "/tables",
+    path: "/news",
     name: "Table List",
     rtlName: "قائمة الجدول",
     icon: "tim-icons icon-puzzle-10",
-    component: TableList,
+    component: NewsList,
     layout: "/admin",
   },
   {

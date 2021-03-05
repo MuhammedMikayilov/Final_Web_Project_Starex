@@ -1,0 +1,106 @@
+#tariffsSection {
+  background-color: #f7f7f7;
+  padding: 30px 0;
+
+  .country {
+    background-color: #fff;
+    padding: 0 40px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    li {
+      padding: 20px 0;
+    }
+
+    .flat {
+      border-radius: 50%;
+      height: 30px;
+      width: 30px;
+      margin-right: 10px;
+    }
+
+    .countryLink {
+      color: #000;
+      font-size: 16px;
+    }
+  }
+
+  .tariffs {
+    background-color: #fff;
+    filter: drop-shadow(0 4px 6px rgba(0, 37, 53, 0.2));
+    margin-top: 20px;
+
+    .tariffList {
+      padding: 15px 25px;
+      border-bottom: 0.5px solid #d9d9d9;
+    }
+  }
+
+  .active {
+    background-color: #ffab03 !important;
+    h4 {
+      color: white !important;
+    }
+  }
+  .activeCountry {
+    border-bottom: 3px solid #ffab03;
+  }
+
+  .countryTariffs {
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    h4 {
+      color: #a9a9a9;
+    }
+  }
+}
+
+// # # # # # # # # # # # # # # RESPONSIVE # # # # # # # # # # # # # # //
+
+@media (max-width: 768px) {
+  #tariffsSection {
+    .country {
+      //padding: 20px !important;
+
+      .flat {
+        margin-right: 7px;
+      }
+
+      .branchsContact {
+        display: block !important;
+      }
+    }
+    .tariffs .tariffList {
+      padding: 17px;
+
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  #tariffsSection {
+    .country {
+      //padding: 15px !important;
+
+      .flat {
+        height: 20px;
+        width: 20px;
+      }
+
+      .countryLink {
+        font-size: 12px;
+      }
+    }
+  }
+  .countryTariffs {
+    h4 {
+      font-size: 14px;
+    }
+  }
+}

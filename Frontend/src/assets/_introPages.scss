@@ -1,0 +1,21 @@
+.store-intro{
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 80px 0;
+
+  .title{
+    color:#ffab03 ;
+
+    h1,span,.linkToHome{color: #ffab03}
+    p{font-weight: 500; font-size: 20px}
+    h1{font-size: 40px}
+
+    .linkToHome:hover{
+      content: "";
+      text-decoration: underline;
+    }
+  }
+
+
+}

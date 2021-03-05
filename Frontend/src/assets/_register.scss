@@ -1,0 +1,17 @@
+.register-form{
+  padding: 50px 400px;
+  .title-register{
+    color: #005fb5;
+    font-size: 25px;
+  }
+
+  .btnRegister{
+    border-radius: 30px;
+    padding: 10px 44px;
+  }
+}
+@media (max-width: 992px){
+  .register-form{
+    padding: 20px 50px;
+  }
+}

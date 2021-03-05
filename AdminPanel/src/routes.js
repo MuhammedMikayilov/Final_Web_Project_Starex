@@ -17,11 +17,11 @@
 */
 import Dashboard from "views/Dashboard.js";
 import Icons from "views/Icons.js";
-import Map from "views/Map.js";
 import Notifications from "views/Notifications.js";
-import NewsList from "views/NewsList.js";
+import NewsList from "views/layouts/components/NewsList.js";
 import Typography from "views/Typography.js";
 import UserProfile from "views/UserProfile.js";
+import IntroSection from "./views/layouts/components/IntroSection";
 
 var routes = [
   {
@@ -41,14 +41,6 @@ var routes = [
     layout: "/admin",
   },
   {
-    path: "/map",
-    name: "Map",
-    rtlName: "خرائط",
-    icon: "tim-icons icon-pin",
-    component: Map,
-    layout: "/admin",
-  },
-  {
     path: "/notifications",
     name: "Notifications",
     rtlName: "إخطارات",
@@ -59,15 +51,20 @@ var routes = [
   {
     path: "/user-profile",
     name: "User Profile",
-    rtlName: "ملف تعريفي للمستخدم",
     icon: "tim-icons icon-single-02",
     component: UserProfile,
     layout: "/admin",
   },
   {
+    path: "/intro",
+    name: "Intro",
+    icon: "tim-icons icon-puzzle-10",
+    component: IntroSection,
+    layout: "/admin",
+  },
+  {
     path: "/news",
-    name: "Table List",
-    rtlName: "قائمة الجدول",
+    name: "News List",
     icon: "tim-icons icon-puzzle-10",
     component: NewsList,
     layout: "/admin",

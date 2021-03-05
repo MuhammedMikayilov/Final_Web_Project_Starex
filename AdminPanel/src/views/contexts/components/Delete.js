@@ -1,8 +1,8 @@
-import React, {Component} from 'react';
+import React from 'react';
 import {deleteNewsData, getNewsList} from "../../actions/news";
 
 const DeleteForm = (props)=> {
-    const {newsApi, setNewsApi, itemId, setModel} = props;
+    const {state, setState, itemId, setModel} = props;
 
     return (
         <>
@@ -10,8 +10,8 @@ const DeleteForm = (props)=> {
                 className='btn btn-success'
                 onClick={async (e) => {
                     e.preventDefault()
-                    await deleteNewsData(newsApi, setNewsApi, itemId)
-                    await getNewsList(newsApi, setNewsApi)
+                    await deleteNewsData(state, setState, itemId)
+                    await getNewsList(state, setState)
                     setModel({deleted:false})
 
                 }}

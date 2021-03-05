@@ -1,4 +1,3 @@
-
 import React from "react";
 
 // reactstrap components
@@ -11,22 +10,29 @@ import {
   Row,
   Col,
 } from "reactstrap";
-import {createNewsData, getNewsList} from "./actions/news";
-import UpdateNews from "./components/UpdateNews";
-import DeleteNews from "./components/DeleteNews";
+import {getNewsDetail, getNewsList} from "../../actions/news";
+import UpdateNews from "../../components/News/UpdateNews";
+import DeleteNews from "../../components/News/DeleteNews";
+import CreateNews from "../../components/News/CreateNews";
+import DetailNews from "../../components/News/DetailNews";
 
 function Tables() {
-
   const [newsApi, setNewsApi] = React.useState();
-  const [model, setModel] = React.useState({model: false, update: false, deleted: false});
+  const [model, setModel] = React.useState({model: false, info: false, update: false, deleted: false});
   const [updateId, setUpdateId] = React.useState({id: 0, title: "", image: ""});
   const [deletedId, setDeletedId]= React.useState({id:0, title:""});
+  const [item, setItem]= React.useState({});
+  const [infoItem, updateInfo]= React.useState();
+  const [news, setNews] = React.useState({page: "news"})
   const titleRef = React.useRef()
   const imageRef = React.useRef()
+  const imageDetailRef = React.useRef()
+  const [image, uploadImg] = React.useState('')
+  const [imageDetail, uploadImgDetail] = React.useState('')
+  const [editorVal, updateEditorVal] = React.useState()
 
   React.useEffect(() => {
     getNewsList(newsApi, setNewsApi)
-    console.log("l", newsApi)
   }, []);
 
   return (
@@ -37,52 +43,26 @@ function Tables() {
             <Card>
               <CardHeader>
                 <CardTitle tag="h4">News Table</CardTitle>
-                <button
-                    className="btn btn-success"
-                    onClick={()=>setModel({model: true})}
-                >
-                  Create
-                </button>
-                {model.model && (
-                    <div className="model mt-3 p-5" style={{border: "1px solid white", borderRadius: "30px"}}>
-                      <div className="form">
-                        <form>
-                          <div className="form-group">
-                            <label htmlFor="Title">Title</label>
-                            <input
-                                ref={titleRef}
-                                type="text" id='Title'
-                                className="form-control"
-                                placeholder="Enter title"
-                            />
-                          </div>
-                          <div className="form-group">
-                            <label>Image</label>
-                            <input
-                                ref={imageRef}
-                                type="text"
-                                className="form-control"
-                                placeholder="Image"
-                            />
-                          </div>
-                         <div className="buttons text-center">
-                           <button
-                               className='btn btn-success'
-                                   onClick={async (e)=> {
-                                     e.preventDefault()
-                                     await createNewsData(titleRef.current.value, imageRef.current.value)
-                                     await getNewsList(newsApi, setNewsApi)
-                                     setModel({model: false})
-                                   }}
-                           >
-                             Create
-                           </button>
-                           <button className='btn btn-danger' onClick={()=>setModel({model: false})}>Cancel</button>
-                         </div>
-                        </form>
-                      </div>
-                    </div>
-                )}
+                <CreateNews
+                    state={newsApi}
+                    setState={setNewsApi}
+                    model={model}
+                    setModel={setModel}
+                    editorVal={editorVal}
+                    updateEditorVal={updateEditorVal}
+                    titleRef={titleRef}
+
+
+                    //image
+                    imageRef={imageRef}
+                    imageDetailRef={imageDetailRef}
+                    image={image}
+                    imageDetail={imageDetail}
+
+                    //image functions
+                    uploadImg={uploadImg}
+                    uploadImgDetail={uploadImgDetail}
+                />
               </CardHeader>
               <CardBody>
                 <Table className="tablesorter" responsive>
@@ -96,7 +76,7 @@ function Tables() {
                   <tbody>
                   {newsApi?.data?.map((item, key)=>(
                       <tr key={key}>
-                        <td>{item.image}</td>
+                        <td><img src={`http://localhost:50725/api/image/${item.image}`} style={{width:"70px"}} alt=""/></td>
                         <td>{item.title}</td>
                         <td className='text-center'>
                           <button
@@ -108,7 +88,15 @@ function Tables() {
                           >
                             Update
                           </button>
-                          <button className="btn btn-warning mr-2">Info</button>
+                          <button className="btn btn-warning mr-2"
+                                  onClick={async ()=>{
+                                    await getNewsDetail(infoItem, updateInfo, item.id)
+                                    setModel({info: true})
+                                    setDeletedId({id: item.id, title: item.title})
+                                    await console.log("logs", infoItem)
+                                  }}
+                          >Info</button>
+                          {/*<p>item: {console.log("item")}</p>*/}
                           <button className="btn btn-danger"
                                   onClick={()=> {
                                     setModel({deleted: true})
@@ -123,16 +111,27 @@ function Tables() {
               </CardBody>
             </Card>
           </Col>
+          <DetailNews
+              detail={model.info}
+              title={deletedId.title}
+              itemId={deletedId}
+              item={item}
+              state={newsApi}
+              setState={setNewsApi}
+              setModel={setModel}
+              page={news}
+              infoItem={infoItem}
+          />
           <UpdateNews
               update={model.update}
               titleRef={titleRef}
               imageRef={imageRef}
-              newsApi={newsApi}
+              state={newsApi}
               setModel={setModel}
               updateId={updateId}
-              setNewsApi={setNewsApi}
-              model={model.model}
+              setState={setNewsApi}
               title={updateId.title}
+              page={news}
           />
 
           <DeleteNews

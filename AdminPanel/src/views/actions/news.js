@@ -10,24 +10,42 @@ export const getNewsList = async (state, setState) => {
 
 }
 
-export const createNewsData = async (title, image) => {
+export const getNewsDetail = async (state,setState, id) => {
+   let response = await axios.get(`${link}/${id}`)
+
+    setState(response.data)
+    // console.log("item", response)
+
+}
+
+export const createNewsData = async (title, image, imageDetail, content) => {
     let data = {
         title: title,
         image: image,
+
+        newsDetail: {
+            imageBig:imageDetail,
+            content: content
+        },
         isDeleted: false
     }
     await axios.post(`${link}`, data)
 }
 
 export const updateNewsData = async (title, image, id) => {
-    const requestOptions = {
-        method: 'PUT',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ title: title, image: image })
-    };
-    await fetch(`${link}/${id}`, requestOptions)
+
+    let formData = new FormData()
+    formData.append('title', title)
+    formData.append('image', image)
+
+    let data = {
+        title: title,
+        image: image,
+        // photo: photo
+    }
+    await axios.put(`${link}/${id}`, data)
 }
 
 export const deleteNewsData = async (state, setState, id) => {
-     await fetch(`${link}/${id}`, { method: 'DELETE' })
+    await axios.delete(`${link}/${id}`, {method:'DELETE'})
 }

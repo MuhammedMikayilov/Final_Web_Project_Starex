@@ -1,16 +1,23 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { CountiesList } from "@layouts/Pages/Tariffs/actions/countries";
+import { CountiesList, getCountries } from "@layouts/Pages/Tariffs/actions/countries";
 
 const CountriesComp = (props) => {
+  const [countryApi, setCountryApi] = React.useState()
   const { hasLiquid, hasWater, selectId, setId } = props;
-  const [state, setState] = React.useState(CountiesList);
+  // const [state, setState] = React.useState(CountiesList);
+
+
+  React.useEffect(()=>{
+    getCountries(countryApi, setCountryApi)
+  }, []) 
 
   const forCountries = () => {
-    return state.data.map((item, key) => {
+    return countryApi?.data?.map((item, key) => {
+
       return (
         <li
-          className={`list-unstyled test ${
+          className={`list-unstyled ${
             selectId === item.id ? "activeCountry" : ""
           }`}
           key={key}

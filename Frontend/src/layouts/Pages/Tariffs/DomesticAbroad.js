@@ -5,7 +5,9 @@ const DomesticAbroad = (props) => {
   const { isAbroad, setAbroad } = props;
 
   return (
-    <div className="row d-flex justify-content-center mb-5 mt-4 text-center"></div>
+    <div className="row d-flex justify-content-center mb-5 mt-4 text-center">
+      
+    </div>
   );
 };
 

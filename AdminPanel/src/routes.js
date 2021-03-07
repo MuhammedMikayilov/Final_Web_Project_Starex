@@ -19,9 +19,10 @@ import Dashboard from "views/Dashboard.js";
 import Icons from "views/Icons.js";
 import Notifications from "views/Notifications.js";
 import NewsList from "views/layouts/components/NewsList.js";
-import Typography from "views/Typography.js";
 import UserProfile from "views/UserProfile.js";
 import IntroSection from "./views/layouts/components/IntroSection";
+import HowWorkSection from "./views/layouts/components/HowWorkSection";
+import CountrySection from "./views/layouts/components/CountrySection";
 
 var routes = [
   {
@@ -70,11 +71,19 @@ var routes = [
     layout: "/admin",
   },
   {
-    path: "/typography",
-    name: "Typography",
+    path: "/works",
+    name: "How To Works",
     rtlName: "طباعة",
-    icon: "tim-icons icon-align-center",
-    component: Typography,
+    icon: "tim-icons icon-puzzle-10",
+    component: HowWorkSection,
+    layout: "/admin",
+  },
+  {
+    path: "/country",
+    name: "Countries",
+    rtlName: "طباعة",
+    icon: "tim-icons icon-puzzle-10",
+    component: CountrySection,
     layout: "/admin",
   },
 ];

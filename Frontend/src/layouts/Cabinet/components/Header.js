@@ -26,7 +26,12 @@ const Header = (props)=> {
                         </div>
                     </div>
                     <div className="col-12 col-md-6 mb-4">
-                        <div className="order-btn w-100 btn btn-outline-primary justify-content-around">
+                        <div className="order-btn w-100 btn btn-outline-primary justify-content-around"
+                            //  onClick={() => {
+                            //      setAbroad(true);
+                            //  }}
+                        >
+                        
                             Bəyannamə əlavə et <i className="fas fa-newspaper"/>
                         </div>
                     </div>

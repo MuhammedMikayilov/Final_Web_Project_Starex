@@ -183,7 +183,7 @@ export const HeaderNavbar = [
     //Root compoenent if it is main root
     component: (props) => <Contact {...props} />,
   },
-
+  
   {
     //Root path
     path: "/details",

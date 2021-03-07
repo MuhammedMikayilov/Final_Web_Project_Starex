@@ -7,7 +7,6 @@ export const getNewsList = async (state, setState) => {
 
     if(list.status === 200)
         setState({...state, data: list.data})
-
 }
 
 export const getNewsDetail = async (state,setState, id) => {

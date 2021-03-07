@@ -1,6 +1,6 @@
 import React from 'react';
 import {Col} from "reactstrap";
-import UploadForm from "./components/Upload";
+import UpdateForm from "./components/Update";
 import DeleteForm from "./components/Delete";
 import InfoForm from "./components/Info";
 
@@ -44,10 +44,11 @@ const Modal = (props)=> {
                                         }
                                         {
                                             update &&
-                                            <UploadForm
+                                            <UpdateForm
                                                 titleRef={titleRef}
                                                 imageRef={imageRef}
                                                 itemId={itemId}
+                                                item={item}
                                                 state={state}
                                                 setState={setState}
                                                 setModel={setModel}

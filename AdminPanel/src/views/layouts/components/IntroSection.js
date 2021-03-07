@@ -9,7 +9,7 @@ const IntroSection = (props)=> {
     }
 
     const [introApi, setIntroApi] = React.useState();
-    const [model, setModel] = React.useState({model: false, info: false, update: false, deleted: false});
+    const [model, setModel] = React.useState({model: false, info: false, update: false});
     const [updateId, setUpdateId] = React.useState({id: 0, title: '', intro: true})
     const [intro] = React.useState({page:"intro"})
     const titleRef = React.useRef()
